@@ -6,6 +6,6 @@
 Popup <br>
 Carrousel (à voir) <br>
 ## Choix de composante Vue.js: <br>
-Galerie interactive / Carrousel / Lightbox <br>
+Galerie interactive / Carrousel / Lightbox (à voir) <br>
 Darkmode / Lightmode toggle <br>
 Compteur de compétences animées <br>
