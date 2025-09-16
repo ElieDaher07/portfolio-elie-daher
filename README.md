@@ -4,8 +4,8 @@
 ### <a href="https://trello.com/invite/b/68c1c963a28d135f1f36d32e/ATTI985fe1dd3f721162122389aabeb0125dB7617278/portfolio-elie-daher">Lien Trello</a> <br>
 ## Type de navigation choisi: <br>
 Popup <br>
-Carrousel (à voir) <br>
+Carrousel <br>
 ## Choix de composante Vue.js: <br>
-Galerie interactive / Carrousel / Lightbox (à voir) <br>
-Darkmode / Lightmode toggle <br>
+Galerie interactive / Carrousel / Lightbox  <br>
+Darkmode / Lightmode toggle (à voir) <br>
 Compteur de compétences animées <br>
