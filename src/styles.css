@@ -1,1 +1,119 @@
+/*-- FONT JALDI--*/
 @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+
+:root {
+    --greyDark: #3F3F3F;
+    --greyPale: #A1A1A1;
+    --whitePale: #D9D9D9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: "Jaldi", sans-serif;
+    scroll-behavior: smooth
+}
+
+.banniere,
+.apropos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    padding: 72px 24px;
+    color: var(--whitePale);
+    z-index: 1;
+}
+
+.mot-portfolio,
+.bloc-nom,
+.role {
+    user-select: none;
+}
+
+.banniere:before {
+    content: "";
+    background-image: url("../assets/image/background.jpg");
+    filter: brightness(0.3) contrast(0.85) saturate(0.6) grayscale(0.3);
+    position: absolute;
+    inset: 0;
+    /* inset 0 = couvre toute la section */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.mot-portfolio {
+    display: block;
+    font-size: clamp(40px, 14vw, 110px);
+    /* 40px = min, 14vw = preferé, 110px = max */
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--greyPale);
+    text-shadow:
+        0 0 14px var(--greyPale),
+        0 0px 60px var(--greyPale);
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.bloc-nom {
+    margin-top: 6px;
+    font-size: clamp(32px, 11vw, 64px);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.prenom,
+.nomfamille {
+    display: block;
+}
+
+.role {
+    margin: 6px 0 36px;
+    letter-spacing: 0.12em;
+    color: var(--whitePale);
+    text-align: right;
+}
+
+.role-3d {
+    margin-left: 6px;
+}
+
+.fleche {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.15s ease;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+}
+
+.fleche:hover {
+    transform: translateX(-50%) translateY(2px);
+}
+
+.apropos:before {
+    content: "";
+    background-image: url("../assets/image/background2.jpg");
+    filter: brightness(0.3) contrast(0.85) saturate(0.6) grayscale(0.3);
+    position: absolute;
+    inset: 0;
+    /* inset 0 = couvre toute la section */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
