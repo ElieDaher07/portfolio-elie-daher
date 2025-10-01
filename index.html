@@ -9,6 +9,16 @@
 
     <link rel="stylesheet" href="/src/styles.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 
@@ -45,6 +55,7 @@
     <!-- SECTION 2 - À PROPOS+OBJECTIF+CONTACT -->
 
     <section id="apropos" class="section apropos">
+
         <div class="boite-texte">
             <p class="bloc-apropos">
                 Je m’appelle Elie. Blablablablabla
@@ -67,18 +78,76 @@
         </div>
     </section>
 
-
-    <!-- SECTION 3 - PROJETS -->
+    <!-- SECTION 3 - PROJETS + COMPÉTENCES -->
 
     <section class="section projets">
 
+        <!-- ===== Filtres (TOUT / 3D / JEUX / WEB) ===== -->
 
-        <div class="parent">
-            <div class="div2">Portfolio</div>
-            <div class="div3">Elie</div>
-            <div class="div4">Daher</div>
+        <nav class="filtres">
+            <ul class="filtres-liste">
+                <li><button class="filtre">TOUT</button></li>
+                <li><button class="filtre">3D</button></li>
+                <li><button class="filtre">JEUX</button></li>
+                <li><button class="filtre">WEB</button></li>
+            </ul>
+        </nav>
+
+        <!-- ===== Carrousel  ===== -->
+        <div class="carrousel">
+            <div class="carrousel-liste">
+
+                <article class="carte">
+                    <img src="../assets/projects/mobile-desolation.png" alt="Projet Désolation">
+                    <div class="carte-voile"></div>
+                    <h3 class="carte-titre">DÉSOLATION</h3>
+                </article>
+
+                <article class="carte">
+                    <img src="../assets/image/mobile-arsenal.png" alt="Projet Arsenal">
+                    <div class="carte-voile"></div>
+                    <h3 class="carte-titre">ARSENAL</h3>
+                </article>
+
+                <article class="carte">
+                    <img src="../assets/projects/p3.jpg" alt="Projet Powball">
+                    <div class="carte-voile"></div>
+                    <h3 class="carte-titre">POWBALL</h3>
+                </article>
+
+                <article class="carte">
+                    <img src="../assets/projects/thelostfriend-mobile.jpg" alt="Projet 'The Lost Friend'">
+                    <div class="carte-voile"></div>
+                    <h3 class="carte-titre">'THE LOST FRIEND'</h3>
+                </article>
+
+                <article class="carte">
+                    <img src="../assets/projects/p5.jpg" alt="Projet EML">
+                    <div class="carte-voile"></div>
+                    <h3 class="carte-titre">EML</h3>
+                </article>
+
+            </div>
+
+            <!-- piste scroll décorative sous le carrousel -->
+
         </div>
 
+        <!-- ===== Logos Compétences ===== -->
+        <div class="logos-bloc">
+            <div class="logos-trait"></div>
+            <ul class="logos-liste">
+                <li><img src="../assets/image/maya.png" alt="Maya"></li>
+                <li><img src="../assets/image/unity.png" alt="Unity"></li>
+                <li><img src="../assets/image/figma.png" alt="Figma"></li>
+                <li><img src="../assets/image/vscode.png" alt="VS Code"></li>
+                <li><img src="../assets/image/wordpress.png" alt="WordPress"></li>
+                <li><img src="../assets/image/touchdesigner.png" alt="Touch Designer"></li>
+                <li><img src="../assets/image/reaper.png" alt="Reaper"></li>
+                <li><img src="../assets/image/davinci.png" alt="DaVinci"></li>
+            </ul>
+            <div class="logos-trait"></div>
+        </div>
 
 
     </section>

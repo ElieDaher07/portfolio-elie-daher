@@ -39,7 +39,7 @@ html {
 
 .mot-portfolio {
     display: block;
-    font-size: clamp(40px, 17vw, 120px);
+    font-size: clamp(40px, 14vw, 120px);
     /*  min, preferé,  max */
     font-weight: 700;
     letter-spacing: 0.11em;
@@ -51,19 +51,23 @@ html {
     font-weight: 700;
     letter-spacing: 0.11em;
     text-align: right;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 .prenom {
     display: block;
-    margin-bottom: -70px;
+    margin-bottom: -56px;
+}
+
+.nomfamille {
+    margin-right: -5px;
 }
 
 .bloc-role {
-    letter-spacing: 0.04em;
+    letter-spacing: 0.11em;
     color: var(--whitePale);
     text-align: right;
-    margin-top: -30px;
+    margin-top: -25px;
 
 }
 
@@ -99,6 +103,19 @@ html {
     z-index: -1;
 }
 
+.apropos {
+    padding-bottom: 24px;
+}
+
+.boite-texte {
+    width: 100%;
+    border-top: 3px solid var(--greyDark);
+    border-bottom: 3px solid var(--greyDark);
+    border-radius: 5px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
 .apropos:before,
 .projets:before {
     content: "";
@@ -113,10 +130,135 @@ html {
     z-index: -1;
 }
 
-.boite-texte {
+.projets {
+    min-height: auto;
+    padding-top: 16px;
+    padding-bottom: 120px;
+    margin-top: 0;
+}
+
+
+
+/* ===== Filtres (TOUT / 3D / JEUX / WEB) ===== */
+.filtres {
+    width: 100%;
+    max-width: 760px;
+    margin-bottom: 60x;
+}
+
+.filtres-liste {
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 0 8px;
+}
+
+
+
+.filtre {
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 3px solid var(--greyDark);
+    border-radius: 1px;
+    color: var(--whitePale);
+    letter-spacing: 0.11em;
+    transition: opacity .15s ease, background .15s ease;
+}
+
+.filtre:hover {
+    border-color: var(--greyPale);
+}
+
+.filtre:active {
+    border-color: var(--whitePale);
+}
+
+/* ===== Carrousel mobile (CSS scroll-snap) ===== */
+.carrousel {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* ===== Fait par ChatGPT ===== */
+.carrousel-liste {
+    display: flex;
+    gap: 16px;
+    padding: 4px 8px 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carte {
+    flex: 0 0 84%;
+    max-width: 84%;
+    position: relative;
+    scroll-snap-align: center;
+    border-radius: 18px;
+    border: 2px solid var(--greyDark);
+    overflow: hidden;
+}
+
+.carte img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}
+
+.carte-voile {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, .15), rgba(0, 0, 0, .55));
+}
+
+.carte-titre {
+    position: absolute;
+    inset: auto 0 42% 0;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+
+/* ===== Logos (Compétences + Outils utilisés pour les 5 projets ) ===== */
+.logos-bloc {
+    width: 100%;
+    margin: 60px auto 0;
+    text-align: center;
     border-top: 3px solid var(--greyDark);
     border-bottom: 3px solid var(--greyDark);
-    border-radius: 5px;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.logos-liste {
+    list-style: none;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.logos-liste img {
+    display: block;
+    height: 50px;
+    width: auto;
+    opacity: 0.7;
+    transition: opacity .15s ease;
+}
+
+.logos-liste img:hover {
+    opacity: 1;
 }
