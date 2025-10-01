@@ -112,3 +112,11 @@ html {
     background-size: cover;
     z-index: -1;
 }
+
+.boite-texte {
+    border-top: 3px solid var(--greyDark);
+    border-bottom: 3px solid var(--greyDark);
+    border-radius: 5px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
