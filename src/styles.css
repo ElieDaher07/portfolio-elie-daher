@@ -39,8 +39,8 @@ html {
 
 .mot-portfolio {
     display: block;
-    font-size: clamp(40px, 17vw, 90px);
-    /* 40px = min, 14vw = preferé, 110px = max */
+    font-size: clamp(40px, 17vw, 120px);
+    /*  min, preferé,  max */
     font-weight: 700;
     letter-spacing: 0.11em;
     color: var(--greyPale);
@@ -72,7 +72,7 @@ html {
     margin-bottom: -10px;
 }
 
-.fleche {
+.fleche-banniere {
     position: absolute;
     bottom: 5px;
     transform: translateX(-50%);
