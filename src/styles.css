@@ -137,8 +137,6 @@ html {
     margin-top: 0;
 }
 
-
-
 /* ===== Filtres (TOUT / 3D / JEUX / WEB) ===== */
 .filtres {
     width: 100%;
@@ -154,8 +152,6 @@ html {
     gap: 10px;
     padding: 0 8px;
 }
-
-
 
 .filtre {
     position: relative;
@@ -193,6 +189,8 @@ html {
     -webkit-overflow-scrolling: touch;
 }
 
+
+/* ===== Fait par ChatGPT ===== */
 .carte {
     flex: 0 0 84%;
     max-width: 84%;
@@ -203,6 +201,7 @@ html {
     overflow: hidden;
 }
 
+/* ===== Fait par ChatGPT ===== */
 .carte img {
     display: block;
     width: 100%;
@@ -211,10 +210,12 @@ html {
     aspect-ratio: 4 / 5;
 }
 
+/* ===== Fait par ChatGPT ===== */
 .carte-voile {
     position: absolute;
     inset: 0;
     background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, .15), rgba(0, 0, 0, .55));
+    /* Radial gradient généré par ChatGPT */
 }
 
 .carte-titre {
@@ -225,9 +226,9 @@ html {
     color: #fff;
     font-weight: 700;
     font-size: 28px;
-    letter-spacing: .03em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+    text-shadow: 0 2px 6px var(--greyDark);
 }
 
 /* ===== Logos (Compétences + Outils utilisés pour les 5 projets ) ===== */
@@ -256,7 +257,7 @@ html {
     height: 50px;
     width: auto;
     opacity: 0.7;
-    transition: opacity .15s ease;
+    transition: opacity 0.15s ease;
 }
 
 .logos-liste img:hover {
