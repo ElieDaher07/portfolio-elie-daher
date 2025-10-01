@@ -8,6 +8,7 @@
 }
 
 * {
+   
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,6 +17,10 @@
 html {
     font-family: "Jaldi", sans-serif;
     scroll-behavior: smooth
+}
+
+body {
+    background-color: var(--greyDark);
 }
 
 .mot-portfolio,
@@ -216,6 +221,10 @@ html {
     inset: 0;
     background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, .15), rgba(0, 0, 0, .55));
     /* Radial gradient généré par ChatGPT */
+}
+
+.carte img {
+    opacity: 0.5;
 }
 
 .carte-titre {
