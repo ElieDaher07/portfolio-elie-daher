@@ -8,20 +8,21 @@
 }
 
 * {
-   
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 html {
     font-family: "Jaldi", sans-serif;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    background-color: black;
+    overflow-x: hidden;
+
 }
 
-body {
-    background-color: var(--greyDark);
-}
 
 .mot-portfolio,
 .bloc-nom,
@@ -40,6 +41,8 @@ body {
     padding: 72px 24px;
     color: var(--whitePale);
     z-index: 1;
+
+
 }
 
 .mot-portfolio {
@@ -49,6 +52,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.11em;
     color: var(--greyPale);
+
 }
 
 .bloc-nom {
@@ -64,21 +68,17 @@ body {
     margin-bottom: -56px;
 }
 
-.nomfamille {
-    margin-right: -5px;
-}
 
 .bloc-role {
     letter-spacing: 0.11em;
     color: var(--whitePale);
     text-align: right;
-    margin-top: -25px;
-
+    margin-top: -20px;
 }
+
 
 .concepteur {
     display: block;
-    margin-bottom: -10px;
 }
 
 .fleche-banniere {
@@ -93,6 +93,10 @@ body {
 
 .fleche:hover {
     transform: translateX(-50%) translateY(2px);
+}
+
+.banniere {
+    background-color: black;
 }
 
 .banniere:before {
@@ -140,6 +144,8 @@ body {
     padding-top: 16px;
     padding-bottom: 120px;
     margin-top: 0;
+
+
 }
 
 /* ===== Filtres (TOUT / 3D / JEUX / WEB) ===== */
@@ -156,6 +162,7 @@ body {
     justify-content: space-evenly;
     gap: 10px;
     padding: 0 8px;
+
 }
 
 .filtre {
@@ -167,6 +174,7 @@ body {
     color: var(--whitePale);
     letter-spacing: 0.11em;
     transition: opacity .15s ease, background .15s ease;
+
 }
 
 .filtre:hover {
@@ -192,6 +200,7 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+
 }
 
 
