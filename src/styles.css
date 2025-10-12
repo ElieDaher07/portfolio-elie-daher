@@ -1,18 +1,16 @@
-/*-- FONT JALDI--*/
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
-
 :root {
     --greyDark: #3F3F3F;
     --greyPale: #A1A1A1;
     --whitePale: #D9D9D9;
+    --section-gap: 72px;
+    --letter-spacing-wide: 0.09em;
+    --letter-weighting-bold: 700;
 }
 
 * {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 html {
@@ -20,62 +18,71 @@ html {
     scroll-behavior: smooth;
     background-color: black;
     overflow-x: hidden;
-
 }
 
-
-.mot-portfolio,
-.bloc-nom,
-.bloc-role {
-    user-select: none;
-}
-
+/* CSS GÉNÉRAL POUR CHAQUE SECTION */
 .section {
+    position: relative;
+}
+
+/* SECTION 1 - BANNIÈRE "PORTFOLIO" */
+
+.banniere {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
     min-height: 100vh;
-    padding: 72px 24px;
+    padding: var(--section-gap) 24px;
     color: var(--whitePale);
-    z-index: 1;
+    z-index: 0;
+}
 
+.banniere:before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: url("../assets/image/background.jpg");
+    filter: brightness(0.2) contrast(0.85) saturate(0.6) grayscale(0.3);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
 
+.bloc-texte {
+    user-select: none;
 }
 
 .mot-portfolio {
     display: block;
-    font-size: clamp(40px, 14vw, 120px);
-    /*  min, preferé,  max */
-    font-weight: 700;
-    letter-spacing: 0.11em;
+    font-size: clamp(50px, 5vw, 70px);
+    font-weight: var(--letter-weighting-bold);
+    letter-spacing: var(--letter-spacing-wide);
     color: var(--greyPale);
-
+    line-height: 0.9;
+    text-align: left;
 }
 
 .bloc-nom {
-    font-size: clamp(80px, 2vw, 30px);
-    font-weight: 700;
-    letter-spacing: 0.11em;
+    font-size: clamp(60px, 6vw, 90px);
+    font-weight: var(--letter-weighting-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: 0.8;
     text-align: right;
-    margin-top: -50px;
+    margin-top: 12px;
 }
-
-.prenom {
-    display: block;
-    margin-bottom: -56px;
-}
-
 
 .bloc-role {
-    letter-spacing: 0.11em;
+    font-size: clamp(20px, 4vw, 30px);
+    letter-spacing: var(--letter-spacing-wide);
     color: var(--whitePale);
+    line-height: 0.9;
+    padding-right: 5px;
     text-align: right;
-    margin-top: -20px;
+    margin-top: 12px;
 }
-
 
 .concepteur {
     display: block;
@@ -83,116 +90,130 @@ html {
 
 .fleche-banniere {
     position: absolute;
-    bottom: 5px;
-    transform: translateX(-50%);
-    transition: transform 0.15s ease;
+    user-select: none;
+    bottom: 50px;
+}
+
+.fleche-banniere img {
     width: 50px;
-    height: 50px;
-    text-decoration: none;
+    transition: 0.35s ease;
+    opacity: 0.80;
 }
 
-.fleche:hover {
-    transform: translateX(-50%) translateY(2px);
+.fleche-banniere img:hover {
+    transform: translateY(5px);
+    opacity: 1;
 }
 
-.banniere {
-    background-color: black;
+/* SECTIONS 2 -  À PROPOS + OBJECTIF + CONTACT */
+
+.apropos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: var(--section-gap) 24px;
+    color: var(--whitePale);
+    z-index: 0;
 }
 
-.banniere:before {
-    content: "";
+.apropos:before {
     position: absolute;
-    background-image: url("../assets/image/background.jpg");
-    filter: brightness(0.2) contrast(0.85) saturate(0.6) grayscale(0.3);
+    content: "";
     inset: 0;
-    /* inset 0 = couvre toute la section */
+    background-image: url("../assets/image/background2.jpg");
+    filter: brightness(0.3) contrast(0.85) saturate(0.6) grayscale(0.3);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
 }
 
-.apropos {
-    padding-bottom: 24px;
-}
-
 .boite-texte {
-    width: 100%;
     border-top: 3px solid var(--greyDark);
     border-bottom: 3px solid var(--greyDark);
-    border-radius: 5px;
     padding-top: 150px;
     padding-bottom: 150px;
 }
 
-.apropos:before,
+.bloc-apropos,
+.bloc-objectif {
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--whitePale);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* SECTION 3 - PROJETS */
+.projets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 100vh;
+    color: var(--whitePale);
+    z-index: 0;
+}
+
 .projets:before {
-    content: "";
     position: absolute;
+    content: "";
+    top: -1px;
+    right: 0;
+    bottom: -1px;
+    left: 0;
     background-image: url("../assets/image/background2.jpg");
     filter: brightness(0.3) contrast(0.85) saturate(0.6) grayscale(0.3);
-    inset: 0;
-    /* inset 0 = couvre toute la section */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
 }
 
-.projets {
-    min-height: auto;
-    padding-top: 16px;
-    padding-bottom: 120px;
-    margin-top: 0;
+/* Filtres (TOUT / 3D / JEUX / WEB) */
 
-
-}
-
-/* ===== Filtres (TOUT / 3D / JEUX / WEB) ===== */
-.filtres {
-    width: 100%;
-    max-width: 760px;
-    margin-bottom: 60x;
-}
-
-.filtres-liste {
-    user-select: none;
-    list-style: none;
+.bloc-filtres {
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
-    padding: 0 8px;
-
+    justify-content: center;
+    gap: 0;
+    padding: 0 8px 8px;
+    user-select: none;
 }
 
-.filtre {
-    position: relative;
+.bouton-filtre {
     background: none;
-    border: none;
+    border: 0;
     border-bottom: 3px solid var(--greyDark);
-    border-radius: 1px;
     color: var(--whitePale);
-    letter-spacing: 0.11em;
-    transition: opacity .15s ease, background .15s ease;
-
+    font-size: 4vw;
+    padding: 8px 24px 6px;
+    margin: 0;
+    letter-spacing: var(--letter-spacing-wide);
+    transition: border-bottom-color .2s ease, color .2s ease;
 }
 
-.filtre:hover {
-    border-color: var(--greyPale);
+.bouton-filtre:hover {
+    border-bottom-color: var(--greyPale);
 }
 
-.filtre:active {
-    border-color: var(--whitePale);
+.bouton-filtre:active,
+.bouton-filtre.selected {
+    color: var(--whitePale);
+    border-bottom-color: var(--whitePale);
 }
 
-/* ===== Carrousel mobile (CSS scroll-snap) ===== */
+/* ===== Carrousel mobile ===== */
+
 .carrousel {
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
 }
 
-/* ===== Fait par ChatGPT ===== */
+/* Fait par ChatGPT: le scroll-snap-type + -webkit-overflow-scrolling */
 .carrousel-liste {
     display: flex;
     gap: 16px;
@@ -200,11 +221,9 @@ html {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-
 }
 
-
-/* ===== Fait par ChatGPT ===== */
+/* Fait par ChatGPT: scroll-snap-align + overflow */
 .carte {
     flex: 0 0 84%;
     max-width: 84%;
@@ -215,7 +234,6 @@ html {
     overflow: hidden;
 }
 
-/* ===== Fait par ChatGPT ===== */
 .carte img {
     display: block;
     width: 100%;
@@ -224,12 +242,11 @@ html {
     aspect-ratio: 4 / 5;
 }
 
-/* ===== Fait par ChatGPT ===== */
+/* Fait par ChatGPT: radial-gradient initiale */
 .carte-voile {
     position: absolute;
     inset: 0;
     background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, .15), rgba(0, 0, 0, .55));
-    /* Radial gradient généré par ChatGPT */
 }
 
 .carte img {
@@ -242,14 +259,14 @@ html {
     margin: 0;
     text-align: center;
     color: #fff;
-    font-weight: 700;
+    font-weight: var(--letter-weighting-bold);
     font-size: 28px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-shadow: 0 2px 6px var(--greyDark);
 }
 
-/* ===== Logos (Compétences + Outils utilisés pour les 5 projets ) ===== */
+/* Logos (Compétences) */
 .logos-bloc {
     width: 100%;
     margin: 60px auto 0;
@@ -280,4 +297,45 @@ html {
 
 .logos-liste img:hover {
     opacity: 1;
+}
+
+/* Footer */
+
+.bas-de-page {
+    margin-top: 50px;
+}
+
+.fleche-footer img {
+    position: absolute;
+    user-select: none;
+    transform: translateX(-50%) rotate(180deg);
+    transition: 0.25s ease;
+    opacity: 0.80;
+}
+
+.fleche-footer:hover {
+    transform: translateX(-50%) rotate(180deg) translateY(2px);
+    opacity: 1;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0 0;
+    margin: 0;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    opacity: .75;
+    transition: opacity .2s ease, transform .15s ease;
+}
+
+.socials a:hover img {
+    opacity: 1;
+    transform: opacity(1);
 }
