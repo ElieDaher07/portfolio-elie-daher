@@ -2,92 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Elie Daher</title>
     <meta name="description" content="Portfolio d’Elie Daher — Conception de niveaux et environnements 3D.">
-
     <link rel="stylesheet" href="/src/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="./src/scripts.js" defer></script>
 </head>
 
 <body id="haut">
-
-    <!-- SECTION 1 - BANNIÈRE "PORTFOLIO" -->
-
     <section class="section banniere">
-
         <div class="bloc-texte">
-
             <h2 class="mot-portfolio">PORTFOLIO</h2>
-
             <div class="bloc-nom">
                 <h1 class="prenom">ELIE</h1>
                 <h1 class="nomfamille">DAHER</h1>
             </div>
-
             <div class="bloc-role">
                 <span class="concepteur">CONCEPTEUR DE NIVEAU</span>
                 <span class="role-3d">3D</span>
             </div>
         </div>
-
         <a class="fleche-banniere" href="#apropos">
             <img src="../assets/image/arrowDown.png" alt="Flèche vers le bas">
         </a>
-
     </section>
 
-    <!-- SECTION 2 - À PROPOS+OBJECTIF+CONTACT -->
-
     <section id="apropos" class="section apropos">
-
         <div class="boite-texte">
-
-            <p class="bloc-apropos">
-                Je m’appelle Elie. Blablablablabla
-            </p>
-
+            <p class="bloc-apropos">Je m’appelle Elie. Blablablablabla</p>
             <p class="bloc-objectif">
                 Je souhaite obtenir un poste en conception de niveaux dans le domaine du jeu vidéo ou de la 3D, où
                 je pourrai utiliser mes compétences en Unity et Maya. Je suis ouvert à apprendre Blender si
                 nécessaire.<br><br>
             </p>
-
             <p class="bloc-objectif">
                 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna aliqua.
+                et dolore magna aliqua.
             </p>
-
             <p class="bloc-coordonnees">
-
                 <br><strong>438-880-5281</strong> <br>
                 <strong>eliedaher2000@gmail.com</strong>
             </p>
-
         </div>
-
     </section>
 
-    <!-- SECTION 3 - PROJETS + COMPÉTENCES -->
-
     <section class="section projets">
-
-        <!-- ===== Filtres (TOUT / 3D / JEUX / WEB) ===== -->
-
         <div class="bloc-filtres">
             <button class="bouton-filtre selected">TOUT</button>
             <button class="bouton-filtre">3D</button>
@@ -95,87 +65,105 @@
             <button class="bouton-filtre">WEB</button>
         </div>
 
-
-        <!-- ===== Carrousel pour la version Mobile ===== -->
-        <div class="carrousel mobile">
-            <div class="carrousel-liste">
-
-                <card class="carte premier">
-                    <img src="../assets/projects/mobile-desolation.png" alt="Projet Désolation">
-                    <div class="carte-voile"></div>
-                    <h3 class="carte-titre">DÉSOLATION</h3>
-                </card>
-
-                <card class="carte deuxieme">
-                    <img src="../assets/image/mobile-arsenal.png" alt="Projet Arsenal">
-                    <div class="carte-voile"></div>
-                    <h3 class="carte-titre">ARSENAL</h3>
-                </card>
-
-                <card class="carte troisieme">
-                    <img src="../assets/projects/p3.jpg" alt="Projet Powball">
-                    <div class="carte-voile"></div>
-                    <h3 class="carte-titre">POWBALL</h3>
-                </card>
-
-                <card class="carte quatrieme">
-                    <img src="../assets/projects/thelostfriend-mobile.jpg" alt="Projet 'The Lost Friend'">
-                    <div class="carte-voile"></div>
-                    <h3 class="carte-titre">'THE LOST FRIEND'</h3>
-                </card>
-
-                <card class="carte cinquieme">
-                    <img src="../assets/projects/p5.jpg" alt="Projet EML">
-                    <div class="carte-voile"></div>
-                    <h3 class="carte-titre">EML</h3>
-                </card>
-
+        <div class="swiper projets-swiper mobile">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="carte">
+                        <img src="../assets/projects/mobile-desolation.png" alt="Projet Désolation">
+                        <div class="carte-voile"></div>
+                        <h3 class="carte-titre">DÉSOLATION</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte">
+                        <img src="../assets/image/mobile-arsenal.png" alt="Projet Arsenal">
+                        <div class="carte-voile"></div>
+                        <h3 class="carte-titre">ARSENAL</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte">
+                        <img src="../assets/projects/p3.jpg" alt="Projet Powball">
+                        <div class="carte-voile"></div>
+                        <h3 class="carte-titre">POWBALL</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte">
+                        <img src="../assets/projects/thelostfriend-mobile.jpg" alt="Projet 'The Lost Friend'">
+                        <div class="carte-voile"></div>
+                        <h3 class="carte-titre">'THE LOST FRIEND'</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte">
+                        <img src="../assets/projects/p5.jpg" alt="Projet EML">
+                        <div class="carte-voile"></div>
+                        <h3 class="carte-titre">EML</h3>
+                    </div>
+                </div>
             </div>
-
         </div>
 
-        <!-- ===== Logos Compétences ===== -->
+        <div class="projets-grille desktop">
+            <div class="carte">
+                <img src="../assets/projects/mobile-desolation.png" alt="Projet Désolation">
+                <div class="carte-voile"></div>
+                <h3 class="carte-titre">DÉSOLATION</h3>
+            </div>
+            <div class="carte">
+                <img src="../assets/image/mobile-arsenal.png" alt="Projet Arsenal">
+                <div class="carte-voile"></div>
+                <h3 class="carte-titre">ARSENAL</h3>
+            </div>
+            <div class="carte">
+                <img src="../assets/projects/p3.jpg" alt="Projet Powball">
+                <div class="carte-voile"></div>
+                <h3 class="carte-titre">POWBALL</h3>
+            </div>
+            <div class="carte">
+                <img src="../assets/projects/thelostfriend-mobile.jpg" alt="Projet 'The Lost Friend'">
+                <div class="carte-voile"></div>
+                <h3 class="carte-titre">'THE LOST FRIEND'</h3>
+            </div>
+            <div class="carte solo">
+                <img src="../assets/projects/p5.jpg" alt="Projet EML">
+                <div class="carte-voile"></div>
+                <h3 class="carte-titre">EML</h3>
+            </div>
+        </div>
+
         <div class="logos-bloc">
-
-            <ul class="logos-liste">
-                <li><img src="../assets/image/maya.png" alt="Maya"></li>
-                <li><img src="../assets/image/unity.png" alt="Unity"></li>
-                <li><img src="../assets/image/figma.png" alt="Figma"></li>
-                <li><img src="../assets/image/vscode.png" alt="VS Code"></li>
-                <li><img src="../assets/image/wordpress.png" alt="WordPress"></li>
-                <li><img src="../assets/image/touchdesigner.png" alt="Touch Designer"></li>
-                <li><img src="../assets/image/reaper.png" alt="Reaper"></li>
-                <li><img src="../assets/image/davinci.png" alt="DaVinci"></li>
-            </ul>
-
+            <div class="swiper logos-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assets/image/maya.png" alt="Maya"></div>
+                    <div class="swiper-slide"><img src="../assets/image/unity.png" alt="Unity"></div>
+                    <div class="swiper-slide"><img src="../assets/image/figma.png" alt="Figma"></div>
+                    <div class="swiper-slide"><img src="../assets/image/vscode.png" alt="VS Code"></div>
+                    <div class="swiper-slide"><img src="../assets/image/wordpress.png" alt="WordPress"></div>
+                    <div class="swiper-slide"><img src="../assets/image/touchdesigner.png" alt="Touch Designer"></div>
+                    <div class="swiper-slide"><img src="../assets/image/reaper.png" alt="Reaper"></div>
+                    <div class="swiper-slide"><img src="../assets/image/davinci.png" alt="DaVinci"></div>
+                </div>
+            </div>
         </div>
-
-        <!-- ===== Logos Contact Style "Footer" ===== -->
 
         <div class="bas-de-page">
-
             <a href="#haut" class="fleche-footer">
                 <img src="../assets/image/arrowDown.png" alt="Flèche vers le haut">
             </a>
-
             <ul class="socials">
-
-                <li><a href="https://www.linkedin.com/in/yourprofile">
-                        <img src="../assets/image/icon_linkedin.png" alt="LinkedIn">
-                    </a></li>
-                <li><a href="https://github.com/youruser">
-                        <img src="../assets/image/icon_github.png" alt="GitHub">
-                    </a></li>
-                <li><a href="https://instagram.com/youruser">
-                        <img src="../assets/image/icon_instagram.png" alt="Instagram">
-                    </a></li>
-                <li><a href="mailto:eliedaher2000@gmail.com">
-                        <img src="../assets/image/icon_mail.png" alt="Courriel">
-                    </a></li>
+                <li><a href="https://www.linkedin.com/in/"><img src="../assets/image/icon_linkedin.png"
+                            alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/eliedaher07"><img src="../assets/image/icon_github.png"
+                            alt="GitHub"></a></li>
+                <li><a href="https://instagram.com/eliedhr"><img src="../assets/image/icon_instagram.png"
+                            alt="Instagram"></a></li>
+                <li><a href="mailto:eliedaher2000@gmail.com"><img src="../assets/image/icon_mail.png"
+                            alt="Courriel"></a></li>
             </ul>
         </div>
     </section>
-
 </body>
 
 </html>

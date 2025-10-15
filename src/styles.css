@@ -1,3 +1,6 @@
+/* =========================
+   Variables globales
+   ========================= */
 :root {
     --greyDark: #3F3F3F;
     --greyPale: #A1A1A1;
@@ -10,7 +13,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 html {
@@ -20,30 +23,34 @@ html {
     overflow-x: hidden;
 }
 
-/* CSS GÉNÉRAL POUR CHAQUE SECTION */
+/* =========================
+   CSS GÉNÉRAL POUR CHAQUE SECTION
+   ========================= */
 .section {
+    display: flex;
     position: relative;
-}
-
-/* SECTION 1 - BANNIÈRE "PORTFOLIO" */
-
-.banniere {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
-    padding: var(--section-gap) 24px;
     color: var(--whitePale);
     z-index: 0;
+}
+
+/* =========================
+   Section 1: BANNIÈRE
+   ========================= */
+.banniere {
+    padding: var(--section-gap) 24px;
 }
 
 .banniere:before {
     position: absolute;
     content: "";
     inset: 0;
-    background-image: url("../assets/image/background.jpg");
+    background-image: url("../assets/image/mobile_background.jpg");
     filter: brightness(0.2) contrast(0.85) saturate(0.6) grayscale(0.3);
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +59,7 @@ html {
 }
 
 .bloc-texte {
-    user-select: none;
+    user-select: none
 }
 
 .mot-portfolio {
@@ -85,38 +92,31 @@ html {
 }
 
 .concepteur {
-    display: block;
+    display: block
 }
 
 .fleche-banniere {
     position: absolute;
     user-select: none;
-    bottom: 50px;
+    bottom: 50px
 }
 
 .fleche-banniere img {
     width: 50px;
     transition: 0.35s ease;
-    opacity: 0.80;
+    opacity: 0.80
 }
 
 .fleche-banniere img:hover {
     transform: translateY(5px);
-    opacity: 1;
+    opacity: 1
 }
 
-/* SECTIONS 2 -  À PROPOS + OBJECTIF + CONTACT */
-
+/* =========================
+   Section 2: À PROPOS
+   ========================= */
 .apropos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
     padding: var(--section-gap) 24px;
-    color: var(--whitePale);
-    z-index: 0;
 }
 
 .apropos:before {
@@ -146,17 +146,9 @@ html {
     margin: 0 auto;
 }
 
-/* SECTION 3 - PROJETS */
-.projets {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    min-height: 100vh;
-    color: var(--whitePale);
-    z-index: 0;
-}
+/* =========================
+   Section 3: PROJETS
+   ========================= */
 
 .projets:before {
     position: absolute;
@@ -174,12 +166,11 @@ html {
 }
 
 /* Filtres (TOUT / 3D / JEUX / WEB) */
-
 .bloc-filtres {
     display: flex;
     justify-content: center;
     gap: 0;
-    padding: 0 8px 8px;
+    padding-bottom: 100px;
     user-select: none;
 }
 
@@ -188,15 +179,21 @@ html {
     border: 0;
     border-bottom: 3px solid var(--greyDark);
     color: var(--whitePale);
-    font-size: 4vw;
+    font-size: 4.5vw;
     padding: 8px 24px 6px;
     margin: 0;
     letter-spacing: var(--letter-spacing-wide);
-    transition: border-bottom-color .2s ease, color .2s ease;
+    transition: border-bottom-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.bouton-filtre:focus-visible {
+    outline: 2px solid var(--greyPale);
+    outline-offset: 3px;
 }
 
 .bouton-filtre:hover {
-    border-bottom-color: var(--greyPale);
+    border-bottom-color: var(--greyPale)
 }
 
 .bouton-filtre:active,
@@ -205,52 +202,53 @@ html {
     border-bottom-color: var(--whitePale);
 }
 
-/* ===== Carrousel mobile ===== */
-
-.carrousel {
+/* Projets — Swiper (mobile) */
+.projets-swiper {
     width: 100%;
     max-width: 760px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
-/* Fait par ChatGPT: le scroll-snap-type + -webkit-overflow-scrolling */
-.carrousel-liste {
+.projets-swiper .swiper-wrapper {
+    align-items: stretch
+}
+
+.projets-swiper .swiper-slide {
+    width: 84%;
     display: flex;
-    gap: 16px;
-    padding: 4px 8px 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    justify-content: center
 }
 
-/* Fait par ChatGPT: scroll-snap-align + overflow */
+/* Projets — Grid (tablet/desktop) */
+.projets-grille {
+    display: none;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 24px
+}
+
+/* Carte */
 .carte {
-    flex: 0 0 84%;
-    max-width: 84%;
+    width: 100%;
     position: relative;
-    scroll-snap-align: center;
     border-radius: 18px;
     border: 2px solid var(--greyDark);
     overflow: hidden;
+    aspect-ratio: 4 / 5;
 }
 
 .carte img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    aspect-ratio: 4 / 5;
+    opacity: 0.5;
 }
 
-/* Fait par ChatGPT: radial-gradient initiale */
 .carte-voile {
     position: absolute;
     inset: 0;
-    background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, .15), rgba(0, 0, 0, .55));
-}
-
-.carte img {
-    opacity: 0.5;
+    background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55));
 }
 
 .carte-titre {
@@ -266,56 +264,61 @@ html {
     text-shadow: 0 2px 6px var(--greyDark);
 }
 
-/* Logos (Compétences) */
+/* =========================
+   Logos (Compétences)
+   ========================= */
 .logos-bloc {
-    width: 100%;
-    margin: 60px auto 0;
+    width: 350px;
+    margin-top: 80px;
     text-align: center;
     border-top: 3px solid var(--greyDark);
     border-bottom: 3px solid var(--greyDark);
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 0;
 }
 
-.logos-liste {
-    list-style: none;
+.logos-swiper .swiper-wrapper {
+    align-items: center
+}
+
+.logos-swiper .swiper-slide {
+    width: auto;
     display: flex;
-    overflow: hidden;
+    align-items: center;
     justify-content: center;
-    gap: 18px;
-    padding: 0;
-    margin: 0;
+    padding: 0 9px;
 }
 
-.logos-liste img {
-    display: block;
+.logos-swiper img {
     height: 50px;
     width: auto;
+    display: block;
     opacity: 0.7;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.15s ease
 }
 
-.logos-liste img:hover {
-    opacity: 1;
+.logos-swiper img:hover {
+    opacity: 1
 }
 
-/* Footer */
-
+/* =========================
+   Footer
+   ========================= */
 .bas-de-page {
-    margin-top: 50px;
+    margin-top: 50px
 }
 
 .fleche-footer img {
+    width: 50px;
     position: absolute;
     user-select: none;
     transform: translateX(-50%) rotate(180deg);
-    transition: 0.25s ease;
+    transition: 0.35s ease;
     opacity: 0.80;
 }
 
-.fleche-footer:hover {
-    transform: translateX(-50%) rotate(180deg) translateY(2px);
-    opacity: 1;
+.fleche-footer img:hover {
+    transform: translateX(-50%) rotate(180deg) translateY(5px);
+    opacity: 1
 }
 
 .socials {
@@ -323,19 +326,60 @@ html {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 10px 0 0;
-    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .socials img {
     width: 30px;
     height: 30px;
     display: block;
-    opacity: .75;
-    transition: opacity .2s ease, transform .15s ease;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.15s ease
 }
 
 .socials a:hover img {
     opacity: 1;
-    transform: opacity(1);
+    transform: opacity(1)
+}
+
+/* =========================
+   IPAD (≥768px)
+   ========================= */
+@media (min-width: 768px) {
+    .bouton-filtre {
+        font-size: 36px;
+        padding: 10px 28px 8px;
+    }
+
+    .bouton-filtre:focus-visible {
+        outline: 2px solid var(--greyPale);
+        outline-offset: 3px;
+    }
+
+    .projets-swiper,
+    .mobile {
+        display: none !important;
+    }
+
+    .projets-grille {
+        display: grid !important;
+        grid-template-columns: repeat(2, 320px);
+        gap: 18px;
+        justify-content: center;
+        padding: 0 24px;
+        width: 100%;
+    }
+
+    .projets-grille .solo {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 320px;
+    }
+
+    .projets:before {
+        background-repeat: repeat;
+        background-size: 1920px 1080px;
+        background-position: top center;
+    }
 }
