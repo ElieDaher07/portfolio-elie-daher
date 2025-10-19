@@ -30,7 +30,6 @@ html {
     display: flex;
     position: relative;
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -49,7 +48,10 @@ html {
 .banniere:before {
     position: absolute;
     content: "";
-    inset: 0;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
     background-image: url("../assets/image/mobile_background.jpg");
     filter: brightness(0.2) contrast(0.85) saturate(0.6) grayscale(0.3);
     background-position: center;
@@ -98,7 +100,7 @@ html {
 .fleche-banniere {
     position: absolute;
     user-select: none;
-    bottom: 50px
+    bottom: 50px;
 }
 
 .fleche-banniere img {
@@ -122,7 +124,10 @@ html {
 .apropos:before {
     position: absolute;
     content: "";
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-image: url("../assets/image/background2.jpg");
     filter: brightness(0.3) contrast(0.85) saturate(0.6) grayscale(0.3);
     background-position: center;
@@ -144,6 +149,16 @@ html {
     color: var(--whitePale);
     max-width: 760px;
     margin: 0 auto;
+}
+
+.bloc-coordonnees a {
+    text-decoration: none;
+    color: var(--whitePale);
+    transition: color .2s ease;
+}
+
+.bloc-coordonnees a:hover {
+    color: #fff;
 }
 
 /* =========================
@@ -235,6 +250,7 @@ html {
     border: 2px solid var(--greyDark);
     overflow: hidden;
     aspect-ratio: 4 / 5;
+
 }
 
 .carte img {
@@ -242,26 +258,33 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5;
+    filter: none;
+    opacity: 0.65;
+    transition: filter .25s ease, opacity .25s ease;
 }
 
-.carte-voile {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(120% 100% at 50% 0%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55));
+.carte:hover img {
+    cursor: pointer;
 }
 
 .carte-titre {
     position: absolute;
-    inset: auto 0 42% 0;
+    top: auto;
+    right: 0;
+    bottom: 42%;
+    left: 0;
     margin: 0;
     text-align: center;
     color: #fff;
     font-weight: var(--letter-weighting-bold);
     font-size: 28px;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
     text-shadow: 0 2px 6px var(--greyDark);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    transform: translateY(6px);
+    transition: opacity .25s ease, transform .25s ease;
 }
 
 /* =========================
@@ -326,8 +349,7 @@ html {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
 }
 
 .socials img {
@@ -344,9 +366,17 @@ html {
 }
 
 /* =========================
-   IPAD (≥768px)
+   IPAD (≥600px)
    ========================= */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+    .banniere:before {
+        background-image: url("../assets/image/ipad_background.jpg");
+    }
+
+    .bloc-role {
+        font-size: 1.5em;
+    }
+
     .bouton-filtre {
         font-size: 36px;
         padding: 10px 28px 8px;
@@ -382,4 +412,74 @@ html {
         background-size: 1920px 1080px;
         background-position: top center;
     }
+}
+
+
+/* =========================
+   DESKTOP (≥1100px)
+   ========================= */
+
+@media (min-width: 1100px) {
+    .banniere:before {
+        background-image: url("../assets/image/desktop_background.jpg");
+    }
+
+    .mot-portfolio {
+        font-size: 80px;
+        letter-spacing: 0.07em;
+        text-shadow:
+            0 50px 6px rgba(255, 255, 255, .22),
+            0 100px 7px rgba(255, 255, 255, .12),
+            0 150px 8px rgba(255, 255, 255, .09),
+            0 200px 9px rgba(255, 255, 255, .04),
+            0 250px 12px rgba(255, 255, 255, .01);
+    }
+
+    .bloc-texte {
+        width: 900px;
+        height: 400px;
+    }
+
+    .bloc-nom {
+        font-size: 72px;
+        line-height: 0.8;
+        margin-top: 10px;
+    }
+
+    .bloc-role {
+        font-size: 20px;
+        letter-spacing: 0.07em;
+        margin-top: 18px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .fleche-banniere {
+        bottom: 28px;
+    }
+
+    .carte:hover .carte-titre {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .carte img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: none;
+        opacity: 0.95;
+        transition: filter .25s ease, opacity .25s ease;
+    }
+
+    .carte-titre {
+        opacity: 0;
+    }
+
+    .carte:hover img {
+        filter: grayscale(50%) saturate(90%) brightness(0.82) contrast(0.92);
+
+    }
+
 }
