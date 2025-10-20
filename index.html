@@ -23,7 +23,7 @@
 
     <div id="app">
 
-        <!-- SECTION 1 - BANNIÈRE "PORTFOLIO" -->
+        <!-- ===== SECTION 1 - BANNIÈRE "PORTFOLIO"=====  -->
         <section class="section banniere">
             <div class="bloc-texte">
                 <h2 class="mot-portfolio">PORTFOLIO</h2>
@@ -42,7 +42,7 @@
         </section>
 
 
-        <!-- SECTION 2 - À PROPOS+OBJECTIF+CONTACT -->
+        <!-- ===== SECTION 2 - À PROPOS+OBJECTIF+CONTACT ===== -->
         <section id="apropos" class="section apropos">
             <div class="boite-texte">
                 <p class="bloc-apropos">Je m’appelle Elie. Blablablablabla</p>
@@ -63,7 +63,7 @@
             </div>
         </section>
 
-        <!-- SECTION 3 - PROJETS: FILTRES + CARTES + COMPÉTENCES -->
+        <!-- ===== SECTION 3 - PROJETS: FILTRES + CARTES + COMPÉTENCES =====  -->
         <section class="section projets">
             <div class="bloc-filtres">
                 <button class="bouton-filtre" :class="{ selected: activeFilter === 'TOUT'}"
@@ -80,7 +80,7 @@
             <div class="swiper projets-swiper mobile">
                 <div class="swiper-wrapper">
                     <template v-for="p in projectsArr">
-                        <div class="swiper-slide" v-if="activeFilter==='TOUT' || activeFilter===p.category"
+                        <div class="swiper-slide" v-if="activeFilter ==='TOUT' || activeFilter === p.category"
                             @click="openPopup(p)">
                             <div class="carte">
                                 <img :src="p.images[0]" :alt="'Projet ' + p.title">
@@ -94,13 +94,13 @@
             <!-- ===== Grid pour la version Desktop/iPad ===== -->
             <div class="projets-grille desktop">
                 <template v-for="p in projectsArr">
-                    <div class="carte" v-if="activeFilter==='TOUT' || activeFilter===p.category" @click="openPopup(p)">
+                    <div class="carte" v-if="activeFilter ==='TOUT' || activeFilter=== p.category"
+                        @click="openPopup(p)">
                         <img :src="p.images[0]" :alt="'Projet ' + p.title">
                         <h3 class="carte-titre">{{ p.title }}</h3>
                     </div>
                 </template>
             </div>
-
 
             <!-- ===== Logo compétences ===== -->
             <div class="logos-bloc">
@@ -137,10 +137,7 @@
             </div>
         </section>
 
-
-        <!-- =========================
-     Popup Projet 
-     ========================= -->
+        <!-- ===== Popup Projet ===== -->
         <div class="popup-projet" v-show="popupOpened">
             <div class="popup-overlay" @click="closePopup()"></div>
 
@@ -148,13 +145,12 @@
                 <button type="button" class="popup-close" @click="closePopup()">FERMER</button>
 
                 <div class="popup-scroll" v-if="selectedProject">
-                    <!-- Titre -->
-                    <h2 class="popup-title">{{ selectedProject.title }}</h2>
+                    <!-- Titre + Catégorie -->
+                    <h2 class="popup-title">{{ selectedProject.title }} ( {{ selectedProject.category }} )</h2>
 
                     <!-- Tags -->
                     <div class="popup-bloc">
-                        <p class="popup-category"><strong>Catégorie :</strong> {{ selectedProject.category }}</p>
-                        <p class="popup-type"><strong>Type :</strong> {{ selectedProject.type }}</p>
+                        <p class="popup-type"><strong>Type de projet :</strong> {{ selectedProject.type }}</p>
                         <p class="popup-team"><strong>Équipe :</strong> {{ selectedProject.team }}</p>
                         <p class="popup-course"><strong>Cours :</strong> {{ selectedProject.course }}</p>
                     </div>
