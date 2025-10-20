@@ -50,7 +50,7 @@
             "../assets/image/img_arsenal_final_03.png"
         ],
         "link": "https://exemple.com/arsenal",
-        "role": "Modélisateur 3D, set dressing, lighting",
+        "role": "Modélisateur",
         "tools": ["Maya", "Photoshop"]
     },
 
@@ -112,7 +112,7 @@
             "../assets/image/img_eml_03.png",
             "../assets/image/img_eml_04.png"
         ],
-        "link": "https://exemple.com/eml",
+        "link": "https://emerykbelisle.bennerwebs.com/eml/",
         "role": "Intégration, thèmes, gabarits, design UI",
         "tools": ["WordPress", "Figma", "VS Code"]
     }
