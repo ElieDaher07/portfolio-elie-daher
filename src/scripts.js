@@ -48,7 +48,6 @@ app.mount('#app');
 // ----- ANIMATION GSAP ----- //
 
 // SCROLLTRIGGER BANNIERE
-
 gsap.to(".bloc-texte, .fleche-banniere", {
     y: -120,
     opacity: 0,
@@ -87,7 +86,6 @@ gsap.from(".nomfamille", {
 });
 
 // BLOC RÔLE
-
 gsap.from(".bloc-role", {
     opacity: 0,
     y: 6,
