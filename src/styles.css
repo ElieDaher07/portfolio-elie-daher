@@ -365,6 +365,107 @@ html {
     transform: opacity(1)
 }
 
+
+
+/* =========================
+   Popup Projet
+   ========================= */
+.popup-projet {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.popup-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(2px);
+}
+
+.popup-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: min(960px, 92vw);
+    height: min(92vh, 860px);
+    background: rgba(10, 10, 10, .92);
+    border: 1px solid var(--greyDark);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .55);
+    color: var(--whitePale);
+    overflow: hidden;
+}
+
+.popup-scroll {
+    height: 100%;
+    overflow: auto;
+    padding: clamp(16px, 3vw, 28px);
+    scroll-padding-top: 8px;
+}
+
+.popup-title {
+    font-size: clamp(22px, 3vw, 34px);
+    letter-spacing: .03em;
+    margin: 2px 0 16px 0;
+    text-align: left;
+    color: var(--whitePale);
+}
+
+.popup-media {
+    margin: 0 0 14px 0;
+}
+
+.popup-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--greyDark);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+}
+
+.popup-bloc {
+    text-align: left;
+    line-height: 1.55;
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--whitePale);
+    margin: 0 0 18px 0;
+}
+
+.popup-bloc p {
+    margin-top: 10px;
+}
+
+/* Bouton FERMER */
+.popup-close {
+    position: absolute;
+    top: 40px;
+    right: 28px;
+    font-size: 20px;
+    background: none;
+    border: 2px dashed var(--whitePale);
+    border-radius: 2px;
+    color: var(--whitePale);
+    letter-spacing: 0.08em;
+    font-weight: var(--letter-weighting-bold);
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: all 0.18s ease;
+}
+
+.popup-close:hover {
+    color: var(--greyDark);
+    background-color: var(--whitePale);
+}
+
+
 /* =========================
    IPAD (≥600px)
    ========================= */
@@ -480,7 +581,6 @@ html {
 
     .carte:hover img {
         filter: grayscale(50%) saturate(90%) brightness(0.82) contrast(0.92);
-
     }
 
 }

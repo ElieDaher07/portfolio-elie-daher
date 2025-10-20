@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Elie Daher</title>
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.png">
     <meta name="description" content="Portfolio d’Elie Daher — Conception de niveaux et environnements 3D.">
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="./src/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
@@ -19,150 +20,239 @@
 </head>
 
 <body id="haut">
-    <section class="section banniere">
-        <div class="bloc-texte">
-            <h2 class="mot-portfolio">PORTFOLIO</h2>
-            <div class="bloc-nom">
-                <h1 class="prenom">ELIE</h1>
-                <h1 class="nomfamille">DAHER</h1>
-            </div>
-            <div class="bloc-role">
-                <span class="concepteur">CONCEPTEUR DE NIVEAU</span>
-                <span class="role-3d">3D</span>
-            </div>
-        </div>
-        <a class="fleche-banniere" href="#apropos">
-            <img src="../assets/image/arrow.png" alt="Flèche vers le bas">
-        </a>
-    </section>
 
-    <section id="apropos" class="section apropos">
-        <div class="boite-texte">
-            <p class="bloc-apropos">Je m’appelle Elie. Blablablablabla</p>
-            <p class="bloc-objectif">
-                Je souhaite obtenir un poste en conception de niveaux dans le domaine du jeu vidéo ou de la 3D, où
-                je pourrai utiliser mes compétences en Unity et Maya. Je suis ouvert à apprendre Blender si
-                nécessaire.<br><br>
-            </p>
-            <p class="bloc-objectif">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua.
-            </p>
-            <p class="bloc-coordonnees">
-                <br><strong><a href="sms:+14388805281">438-880-5281</a></strong> <br>
-                <strong><a href="mailto:eliedaher2000@gmail.com">eliedaher2000@gmail.com</a></strong>
-            </p>
-        </div>
-    </section>
+    <div id="app">
 
-    <section class="section projets">
-        <div class="bloc-filtres">
-            <button class="bouton-filtre selected">TOUT</button>
-            <button class="bouton-filtre">3D</button>
-            <button class="bouton-filtre">JEUX</button>
-            <button class="bouton-filtre">WEB</button>
-        </div>
-
-        <div class="swiper projets-swiper mobile">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="carte">
-                        <img src="../assets/projects/mobile-desolation.png" alt="Projet Désolation">
-
-                        <h3 class="carte-titre">DÉSOLATION</h3>
-                    </div>
+        <!-- SECTION 1 - BANNIÈRE "PORTFOLIO" -->
+        <section class="section banniere">
+            <div class="bloc-texte">
+                <h2 class="mot-portfolio">PORTFOLIO</h2>
+                <div class="bloc-nom">
+                    <h1 class="prenom">ELIE</h1>
+                    <h1 class="nomfamille">DAHER</h1>
                 </div>
-                <div class="swiper-slide">
-                    <div class="carte">
-                        <img src="../assets/image/mobile-arsenal.png" alt="Projet Arsenal">
-
-                        <h3 class="carte-titre">ARSENAL</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="carte">
-                        <img src="../assets/projects/p3.jpg" alt="Projet Powball">
-
-                        <h3 class="carte-titre">POWBALL</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="carte">
-                        <img src="../assets/projects/thelostfriend-mobile.jpg" alt="Projet 'The Lost Friend'">
-
-                        <h3 class="carte-titre">'THE LOST FRIEND'</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="carte">
-                        <img src="../assets/projects/p5.jpg" alt="Projet EML">
-
-                        <h3 class="carte-titre">EML</h3>
-                    </div>
+                <div class="bloc-role">
+                    <span class="concepteur">CONCEPTEUR DE NIVEAU</span>
+                    <span class="role-3d">3D</span>
                 </div>
             </div>
-        </div>
-
-        <div class="projets-grille desktop">
-            <div class="carte">
-                <img src="../assets/projects/mobile-desolation.png" alt="Projet Désolation">
-
-                <h3 class="carte-titre">DÉSOLATION</h3>
-            </div>
-            <div class="carte">
-                <img src="../assets/image/mobile-arsenal.png" alt="Projet Arsenal">
-
-                <h3 class="carte-titre">ARSENAL</h3>
-            </div>
-            <div class="carte">
-                <img src="../assets/projects/p3.jpg" alt="Projet Powball">
-
-                <h3 class="carte-titre">POWBALL</h3>
-            </div>
-            <div class="carte">
-                <img src="../assets/projects/thelostfriend-mobile.jpg" alt="Projet 'The Lost Friend'">
-
-                <h3 class="carte-titre">'THE LOST FRIEND'</h3>
-            </div>
-            <div class="carte solo">
-                <img src="../assets/projects/p5.jpg" alt="Projet EML">
-
-                <h3 class="carte-titre">EML</h3>
-            </div>
-        </div>
-
-        <div class="logos-bloc">
-            <div class="swiper logos-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../assets/image/maya.png" alt="Maya"></div>
-                    <div class="swiper-slide"><img src="../assets/image/unity.png" alt="Unity"></div>
-                    <div class="swiper-slide"><img src="../assets/image/figma.png" alt="Figma"></div>
-                    <div class="swiper-slide"><img src="../assets/image/vscode.png" alt="VS Code"></div>
-                    <div class="swiper-slide"><img src="../assets/image/wordpress.png" alt="WordPress"></div>
-                    <div class="swiper-slide"><img src="../assets/image/touchdesigner.png" alt="Touch Designer"></div>
-                    <div class="swiper-slide"><img src="../assets/image/reaper.png" alt="Reaper"></div>
-                    <div class="swiper-slide"><img src="../assets/image/davinci.png" alt="DaVinci"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bas-de-page">
-            <a href="#haut" class="fleche-footer">
-                <img src="../assets/image/arrow.png" alt="Flèche vers le haut">
+            <a class="fleche-banniere" href="#apropos">
+                <img src="./assets/image/arrow.png" alt="Flèche vers le bas">
             </a>
-            <ul class="socials">
-                <li><a href="https://www.linkedin.com/in/"><img src="../assets/image/icon_linkedin.png"
-                            alt="LinkedIn"></a></li>
-                <li><a href="https://github.com/eliedaher07"><img src="../assets/image/icon_github.png"
-                            alt="GitHub"></a></li>
-                <li><a href="https://instagram.com/eliedhr"><img src="../assets/image/icon_instagram.png"
-                            alt="Instagram"></a></li>
-                <li><a href="mailto:eliedaher2000@gmail.com"><img src="../assets/image/icon_mail.png"
-                            alt="Courriel"></a></li>
-            </ul>
+        </section>
+
+
+        <!-- SECTION 2 - À PROPOS+OBJECTIF+CONTACT -->
+        <section id="apropos" class="section apropos">
+            <div class="boite-texte">
+                <p class="bloc-apropos">Je m’appelle Elie. Blablablablabla</p>
+                <p class="bloc-objectif">
+                    Je souhaite obtenir un poste en conception de niveaux dans le domaine du jeu vidéo ou de la 3D, où
+                    je pourrai utiliser mes compétences en Unity et Maya. Je suis ouvert à apprendre Blender si
+                    nécessaire.<br><br>
+                </p>
+                <p class="bloc-objectif">
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <p class="bloc-coordonnees">
+                    <br><strong><a href="sms:+14388805281">438-880-5281</a></strong> <br>
+                    <strong><a href="mailto:eliedaher2000@gmail.com">eliedaher2000@gmail.com</a></strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3 - PROJETS: FILTRES + CARTES + COMPÉTENCES -->
+        <section class="section projets">
+            <div class="bloc-filtres">
+                <button class="bouton-filtre" :class="{ selected: activeFilter === 'TOUT'}"
+                    @click="setFilter('TOUT')">TOUT</button>
+                <button class="bouton-filtre" :class="{ selected: activeFilter === '3D'}"
+                    @click="setFilter('3D')">3D</button>
+                <button class="bouton-filtre" :class="{ selected: activeFilter === 'JEUX'}"
+                    @click="setFilter('JEUX')">JEUX</button>
+                <button class="bouton-filtre" :class="{ selected: activeFilter === 'WEB'}"
+                    @click="setFilter('WEB')">WEB</button>
+            </div>
+
+            <!-- ===== Swiper pour la version Mobile ===== -->
+            <div class="swiper projets-swiper mobile">
+                <div class="swiper-wrapper">
+                    <template v-for="p in projectsArr">
+                        <div class="swiper-slide" v-if="activeFilter==='TOUT' || activeFilter===p.category"
+                            @click="openPopup(p)">
+                            <div class="carte">
+                                <img :src="p.images[0]" :alt="'Projet ' + p.title">
+                                <h3 class="carte-titre">{{ p.title }}</h3>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- ===== Grid pour la version Desktop/iPad ===== -->
+            <div class="projets-grille desktop">
+                <template v-for="p in projectsArr">
+                    <div class="carte" v-if="activeFilter==='TOUT' || activeFilter===p.category" @click="openPopup(p)">
+                        <img :src="p.images[0]" :alt="'Projet ' + p.title">
+                        <h3 class="carte-titre">{{ p.title }}</h3>
+                    </div>
+                </template>
+            </div>
+
+
+            <!-- ===== Logo compétences ===== -->
+            <div class="logos-bloc">
+                <div class="swiper logos-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../assets/image/maya.png" alt="Maya"></div>
+                        <div class="swiper-slide"><img src="../assets/image/unity.png" alt="Unity"></div>
+                        <div class="swiper-slide"><img src="../assets/image/figma.png" alt="Figma"></div>
+                        <div class="swiper-slide"><img src="../assets/image/vscode.png" alt="VS Code"></div>
+                        <div class="swiper-slide"><img src="../assets/image/wordpress.png" alt="WordPress"></div>
+                        <div class="swiper-slide"><img src="../assets/image/touchdesigner.png" alt="Touch Designer">
+                        </div>
+                        <div class="swiper-slide"><img src="../assets/image/reaper.png" alt="Reaper"></div>
+                        <div class="swiper-slide"><img src="../assets/image/davinci.png" alt="DaVinci"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Mini footer de la section ===== -->
+            <div class="bas-de-page">
+                <a href="#haut" class="fleche-footer">
+                    <img src="../assets/image/arrow.png" alt="Flèche vers le haut">
+                </a>
+                <ul class="socials">
+                    <li><a href="https://www.linkedin.com/in/"><img src="../assets/image/icon_linkedin.png"
+                                alt="LinkedIn"></a></li>
+                    <li><a href="https://github.com/eliedaher07"><img src="../assets/image/icon_github.png"
+                                alt="GitHub"></a></li>
+                    <li><a href="https://instagram.com/eliedhr"><img src="../assets/image/icon_instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="mailto:eliedaher2000@gmail.com"><img src="../assets/image/icon_mail.png"
+                                alt="Courriel"></a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- =========================
+     Popup Projet 
+     ========================= -->
+        <div class="popup-projet" v-show="popupOpened">
+            <div class="popup-overlay" @click="closePopup()"></div>
+
+            <section class="popup-panel">
+                <button type="button" class="popup-close" @click="closePopup()">FERMER</button>
+
+                <div class="popup-scroll" v-if="selectedProject">
+                    <!-- Titre -->
+                    <h2 class="popup-title">{{ selectedProject.title }}</h2>
+
+                    <!-- Tags -->
+                    <div class="popup-bloc">
+                        <p class="popup-category"><strong>Catégorie :</strong> {{ selectedProject.category }}</p>
+                        <p class="popup-type"><strong>Type :</strong> {{ selectedProject.type }}</p>
+                        <p class="popup-team"><strong>Équipe :</strong> {{ selectedProject.team }}</p>
+                        <p class="popup-course"><strong>Cours :</strong> {{ selectedProject.course }}</p>
+                    </div>
+
+                    <!-- Courte description -->
+                    <div class="popup-bloc">
+                        <p>{{ selectedProject.shortDesc }}</p>
+                    </div>
+
+                    <!-- Image 01 -->
+                    <div class="popup-media" v-if="selectedProject.images && selectedProject.images[0]">
+                        <img class="popup-img" :src="selectedProject.images[0]" :alt="selectedProject.title">
+                    </div>
+
+                    <!-- Longue description -->
+                    <div class="popup-bloc">
+                        <p>{{ selectedProject.longDesc }}</p>
+                    </div>
+
+                    <!-- Images 02, 03, 04 -->
+                    <div class="popup-media" v-if="selectedProject.images && selectedProject.images[1]">
+                        <img class="popup-img" :src="selectedProject.images[1]" :alt="selectedProject.title">
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.images && selectedProject.images[2]">
+                        <img class="popup-img" :src="selectedProject.images[2]" :alt="selectedProject.title">
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.images && selectedProject.images[3]">
+                        <img class="popup-img" :src="selectedProject.images[3]" :alt="selectedProject.title">
+                    </div>
+
+                    <!-- Processus de création  -->
+                    <div class="popup-bloc"
+                        v-if="selectedProject.processImages || selectedProject.processDescription01 || selectedProject.processDescription02 || selectedProject.processDescription03 || selectedProject.processDescription04 || selectedProject.processDescription05 || selectedProject.processDescription06">
+                        <p><strong>Processus de création</strong></p>
+                    </div>
+
+                    <!-- 1 -->
+                    <div class="popup-bloc" v-if="selectedProject.processDescription01">
+                        <p>{{ selectedProject.processDescription01 }}</p>
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.processImages && selectedProject.processImages[0]">
+                        <img class="popup-img" :src="selectedProject.processImages[0]" :alt="selectedProject.title">
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="popup-bloc" v-if="selectedProject.processDescription02">
+                        <p>{{ selectedProject.processDescription02 }}</p>
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.processImages && selectedProject.processImages[1]">
+                        <img class="popup-img" :src="selectedProject.processImages[1]" :alt="selectedProject.title">
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="popup-bloc" v-if="selectedProject.processDescription03">
+                        <p>{{ selectedProject.processDescription03 }}</p>
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.processImages && selectedProject.processImages[2]">
+                        <img class="popup-img" :src="selectedProject.processImages[2]" :alt="selectedProject.title">
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="popup-bloc" v-if="selectedProject.processDescription04">
+                        <p>{{ selectedProject.processDescription04 }}</p>
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.processImages && selectedProject.processImages[3]">
+                        <img class="popup-img" :src="selectedProject.processImages[3]" :alt="selectedProject.title">
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="popup-bloc" v-if="selectedProject.processDescription05">
+                        <p>{{ selectedProject.processDescription05 }}</p>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="popup-bloc" v-if="selectedProject.processDescription06">
+                        <p>{{ selectedProject.processDescription06 }}</p>
+                    </div>
+
+                    <!-- Rendus finaux (si présent) -->
+                    <div class="popup-bloc" v-if="selectedProject.finalImages && selectedProject.finalImages.length">
+                        <p><strong>Rendus finaux</strong></p>
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.finalImages && selectedProject.finalImages[0]">
+                        <img class="popup-img" :src="selectedProject.finalImages[0]" :alt="selectedProject.title">
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.finalImages && selectedProject.finalImages[1]">
+                        <img class="popup-img" :src="selectedProject.finalImages[1]" :alt="selectedProject.title">
+                    </div>
+                    <div class="popup-media" v-if="selectedProject.finalImages && selectedProject.finalImages[2]">
+                        <img class="popup-img" :src="selectedProject.finalImages[2]" :alt="selectedProject.title">
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+
+
+    </div>
+
 </body>
 
 </html>
