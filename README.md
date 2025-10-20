@@ -6,6 +6,6 @@
 Popup <br>
 Carrousel <br>
 ## Choix de composante Vue.js: <br>
-Galerie interactive / Carrousel / Lightbox  <br>
+Filtre dynamique de projets <br>
 
 
