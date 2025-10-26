@@ -8,10 +8,10 @@
         "shortDesc": "Environnement 3D atmosphérique orienté ambiance et éclairage.",
         "longDesc": "Projet 3D axé sur la composition et l’éclairage pour créer une ambiance de désolation. Les objectifs incluaient la planification d’un décor cohérent, la modélisation d’assets low/mid poly, l’UV et le texturage, puis l’intégration et le lighting final.",
         "images": [
-            "../assets/image/img_desolation_01.png",
-            "../assets/image/img_desolation_02.png",
-            "../assets/image/img_desolation_03.png",
-            "../assets/image/img_desolation_04.png"
+            "./assets/image/img_desolation_01.png",
+            "./assets/image/img_desolation_02.png",
+            "./assets/image/img_desolation_03.png",
+            "./assets/image/img_desolation_04.png"
         ],
         "link": "https://exemple.com/desolation",
         "role": "Animateur, Compositeur, Designer",
@@ -29,25 +29,25 @@
         "shortDesc": "Magasin médiéval abandonné en low poly, entièrement conçu en équipe.",
         "longDesc": "Création d’un environnement 3D complet inspiré d’un arsenal médiéval abandonné. Cahier de charge : moodboard, modélisation d’assets, texturage, layout, éclairage et rendu final. J’ai contribué à la modélisation, au set dressing et au rendu.",
         "images": [
-            "../assets/image/img_arsenal_01.png",
-            "../assets/image/img_arsenal_02.png",
-            "../assets/image/img_arsenal_03.png",
-            "../assets/image/img_arsenal_04.png"
+            "./assets/image/img_arsenal_01.png",
+            "./assets/image/img_arsenal_02.png",
+            "./assets/image/img_arsenal_03.png",
+            "./assets/image/img_arsenal_04.png"
         ],
         "processImages": [
-            "../assets/image/img_arsenal_process_01.png",
-            "../assets/image/img_arsenal_process_02.png",
-            "../assets/image/img_arsenal_process_03.png",
-            "../assets/image/img_arsenal_process_04.png"
+            "./assets/image/img_arsenal_process_01.png",
+            "./assets/image/img_arsenal_process_02.png",
+            "./assets/image/img_arsenal_process_03.png",
+            "./assets/image/img_arsenal_process_04.png"
         ],
         "processDescription01": "wow processus description 1",
         "processDescription02": "wow processus description 2",
         "processDescription03": "wow processus description 3",
         "processDescription04": "wow processus description 4",
         "finalImages": [
-            "../assets/image/img_arsenal_final_01.png",
-            "../assets/image/img_arsenal_final_02.png",
-            "../assets/image/img_arsenal_final_03.png"
+            "./assets/image/img_arsenal_final_01.png",
+            "./assets/image/img_arsenal_final_02.png",
+            "./assets/image/img_arsenal_final_03.png"
         ],
         "link": "https://exemple.com/arsenal",
         "role": "Modélisateur",
@@ -65,10 +65,10 @@
         "shortDesc": "Jeu arcade expérimental à deux joueurs, physique et timing.",
         "longDesc": "Prototype jouable basé sur des mécaniques d’esquive et d’apparition d’objets. Objectifs : design système simple mais lisible, boucles de feedback claires, intégration sonore et équilibrage. Collaboration pour l’implémentation et les assets.",
         "images": [
-            "../assets/image/img_powball_01.png",
-            "../assets/image/img_powball_02.png",
-            "../assets/image/img_powball_03.png",
-            "../assets/image/img_powball_04.png"
+            "./assets/image/img_powball_01.png",
+            "./assets/image/img_powball_02.png",
+            "./assets/image/img_powball_03.png",
+            "./assets/image/img_powball_04.png"
         ],
         "link": "https://exemple.com/powball",
         "role": "Modélisateur, Game Designer, Concepteur Sonore",
@@ -86,10 +86,10 @@
         "shortDesc": "Expérience narrative courte, centrée sur l’ambiance.",
         "longDesc": "Mini-projet avec focalisation sur la direction artistique, la narration environnementale et le rythme. Travail sur les valeurs de lumière, guidage du joueur et cohérence visuelle.",
         "images": [
-            "../assets/image/img_lostfriend_01.png",
-            "../assets/image/img_lostfriend_02.png",
-            "../assets/image/img_lostfriend_03.png",
-            "../assets/image/img_lostfriend_04.png"
+            "./assets/image/img_lostfriend_01.png",
+            "./assets/image/img_lostfriend_02.png",
+            "./assets/image/img_lostfriend_03.png",
+            "./assets/image/img_lostfriend_04.png"
         ],
         "link": "https://edhr07.itch.io/the-lost-friend",
         "role": "Développeur, Game Designer, Level Designer",
@@ -107,10 +107,10 @@
         "shortDesc": "Site magazine jeux vidéo (WordPress) : gabarits, recherche, contenu.",
         "longDesc": "Mise en place d’un site WordPress type magazine : pages auteurs, 404 personnalisée, recherche d’articles et intégration de contenus (guides, tops, critiques). Travail sur l’UX et la cohérence visuelle.",
         "images": [
-            "../assets/image/img_eml_01.png",
-            "../assets/image/img_eml_02.png",
-            "../assets/image/img_eml_03.png",
-            "../assets/image/img_eml_04.png"
+            "./assets/image/img_eml_01.png",
+            "./assets/image/img_eml_02.png",
+            "./assets/image/img_eml_03.png",
+            "./assets/image/img_eml_04.png"
         ],
         "link": "https://emerykbelisle.bennerwebs.com/eml/",
         "role": "Intégration, thèmes, gabarits, design UI",
