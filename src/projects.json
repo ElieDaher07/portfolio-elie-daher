@@ -7,7 +7,7 @@
     "type": "Individuel",
     "team": "Elie Daher",
     "shortDesc": "J’ai créé une expérience qui exprime la désolation à travers des sons et des animations abstraites, en jouant sur le vide, la confusion et la perte.",
-    "longDesc": "Le projet demandait de créer une expérience interactive à partir d’une caméra et d’un microphone. J’ai produit une scène qui réagit en temps réel avec un rendu 3D, des effets visuels dans TouchDesigner et des sons que j’ai synthétisés dans Repaer et MAX. Le but était de plonger la personne dans une ambiance instable et troublante qui fait ressentir la désolation.",
+    "longDesc": "Le projet demandait de créer une expérience interactive à partir d’une caméra et d’un microphone. J’ai produit une scène qui réagit en temps réel avec un rendu 3D, des effets visuels dans TouchDesigner et des sons que j’ai synthétisés dans Reaper et MAX. Le but était de plonger la personne dans une ambiance instable et troublante qui fait ressentir la désolation.",
     "images": [
       "./assets/images/img_desolation_01.png",
       "./assets/images/img_desolation_02.png",
