@@ -80,7 +80,8 @@
             <div class="swiper projets-swiper mobile">
                 <div class="swiper-wrapper">
                     <template v-for="p in projectsArr">
-
+                        <!-- Ça montre les projets dépendant de son activeFilter, par défaut c'est à 'TOUT' -->
+                        <!-- Si tu clique pour ouvrir un des projets, ça ouvre un popup et met la variable popupOpened à 'true' -->
                         <div class="swiper-slide" v-if="activeFilter === 'TOUT' || activeFilter === p.category"
                             @click="openPopup(p)">
                             <div class="carte">
@@ -95,8 +96,10 @@
 
             <!-- ===== Grid pour la version Desktop/iPad ===== -->
             <div class="projets-grille desktop">
-                <template v-for="p in projectsArr">
 
+                <template v-for="p in projectsArr">
+                    <!-- Ça montre les projets dépendant de son activeFilter, par défaut c'est à 'TOUT' -->
+                    <!-- Si tu clique pour ouvrir un des projets, ça ouvre un popup et met la variable popupOpened à 'true' -->
                     <div class="carte" v-if="activeFilter === 'TOUT' || activeFilter === p.category"
                         @click="openPopup(p)">
                         <img :src="p.images[0]" :alt="'Projet ' + p.title">
@@ -173,6 +176,7 @@
         </section>
 
         <!-- ===== Popup Projet ===== -->
+        <!-- Si popupOpened est 'true' alors montre la div popup-projet-->
         <div class="popup-projet" v-show="popupOpened">
 
             <div class="popup-overlay" @click="closePopup()"></div>
