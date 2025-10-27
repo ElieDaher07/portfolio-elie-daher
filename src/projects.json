@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "title": "DÉSOLATION",
     "category": "3D",
@@ -26,7 +27,7 @@
     "type": "Équipe",
     "team": "Elie Daher, Émeryk Bélisle, Mohammed Amine Boussetta",
     "shortDesc": "J'ai participé à la création d'une scène 3D en équipe dans Maya, représentant un arsenal abandonné en style low poly pour combiner simplicité et ambiance visuelle forte.",
-    "longDesc": "Le projet demandait de concevoir une scène 3D abstraite ou stylisée en équipe. Nous avons choisi de représenter un arsenal abandonné envahi par la végétation, en travaillant sur l'éclairage et la composition pour transmettre une impression d'abandon et de mystère. Chaque membre devait modéliser au moinstrois objets 3D avant de les intégrer à la scène finale, qui a été ajustée jusqu'à obtenir un rendu cohérent et atmosphérique.",
+    "longDesc": "Le projet demandait de concevoir une scène 3D abstraite ou stylisée en équipe. Nous avons choisi de représenter un arsenal abandonné envahi par la végétation, en travaillant sur l'éclairage et la composition pour transmettre une impression d'abandon et de mystère. Chaque membre devait modéliser au moins trois objets 3D avant de les intégrer à la scène finale, qui a été ajustée jusqu'à obtenir un rendu cohérent et atmosphérique.",
     "images": ["./assets/images/img_arsenal_01.png"],
     "processImages": [
       "./assets/images/img_arsenal_process_01.png",
