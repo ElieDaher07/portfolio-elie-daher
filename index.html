@@ -57,8 +57,9 @@
                     création visuelle.
                 </p>
                 <p class="bloc-coordonnees">
-                    <br><strong><a href="sms:+14388805281">438-880-5281</a></strong> <br>
-                    <strong><a href="mailto:eliedaher2000@gmail.com">eliedaher2000@gmail.com</a></strong>
+                    <br><strong><a target="_blank" href="sms:+14388805281">438-880-5281</a></strong> <br>
+                    <strong><a target="_blank"
+                            href="mailto:eliedaher2000@gmail.com">eliedaher2000@gmail.com</a></strong>
                 </p>
             </div>
         </section>
@@ -80,7 +81,7 @@
             <div class="swiper projets-swiper mobile">
                 <div class="swiper-wrapper">
                     <template v-for="p in projectsArr">
-                        <!-- Ça montre les projets dépendant de son activeFilter, par défaut c'est à 'TOUT' -->
+                        <!-- Ça montre les projets dépendant de son activeFilter, par défaut c'est à 'TOUT'. Montre le div si TOUT est choisi ou montre le projet par rapport as son category p.category (donnees json) -->
                         <!-- Si tu clique pour ouvrir un des projets, ça ouvre un popup et met la variable popupOpened à 'true' -->
                         <div class="swiper-slide" v-if="activeFilter === 'TOUT' || activeFilter === p.category"
                             @click="openPopup(p)">
@@ -114,42 +115,42 @@
                 <div class="swiper logos-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="https://www.autodesk.com/products/maya/overview">
+                            <a target="_blank" href="https://www.autodesk.com/products/maya/overview">
                                 <img src="./assets/images/maya.png" alt="Maya">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://unity.com/">
+                            <a target="_blank" href="https://unity.com/">
                                 <img src="./assets/images/unity.png" alt="Unity">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://www.figma.com/">
+                            <a target="_blank" href="https://www.figma.com/">
                                 <img src="./assets/images/figma.png" alt="Figma">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://code.visualstudio.com/">
+                            <a target="_blank" href="https://code.visualstudio.com/">
                                 <img src="./assets/images/vscode.png" alt="VS Code">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://wordpress.org/">
+                            <a target="_blank" href="https://wordpress.org/">
                                 <img src="./assets/images/wordpress.png" alt="WordPress">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://derivative.ca/">
+                            <a target="_blank" href="https://derivative.ca/">
                                 <img src="./assets/images/touchdesigner.png" alt="Touch Designer">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://www.reaper.fm/">
+                            <a target="_blank" href="https://www.reaper.fm/">
                                 <img src="./assets/images/reaper.png" alt="Reaper">
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://www.blackmagicdesign.com/products/davinciresolve">
+                            <a target="_blank" href="https://www.blackmagicdesign.com/products/davinciresolve">
                                 <img src="./assets/images/davinci.png" alt="DaVinci">
                             </a>
                         </div>
@@ -163,13 +164,13 @@
                     <img src="./assets/images/arrow.png" alt="Flèche vers le haut">
                 </a>
                 <ul class="socials">
-                    <li><a href="https://www.linkedin.com/in/">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/">
                             <img src="./assets/images/icon_linkedin.png" alt="LinkedIn"></a></li>
-                    <li><a href="https://github.com/eliedaher07">
+                    <li><a target="_blank" href="https://github.com/eliedaher07">
                             <img src="./assets/images/icon_github.png" alt="GitHub"></a></li>
-                    <li><a href="https://instagram.com/eliedhr">
+                    <li><a target="_blank" href="https://instagram.com/eliedhr">
                             <img src="./assets/images/icon_instagram.png" alt="Instagram"></a></li>
-                    <li><a href="mailto:eliedaher2000@gmail.com">
+                    <li><a target="_blank" href="mailto:eliedaher2000@gmail.com">
                             <img src="./assets/images/icon_mail.png" alt="Courriel"></a></li>
                 </ul>
             </div>
@@ -197,7 +198,8 @@
                     <p class="popup-team"><strong>Réalisé par :</strong> {{ selectedProject.team }}</p>
                     <p class="popup-course"><strong>Cours :</strong> {{ selectedProject.course }}</p>
                     <p class="popup-role"><strong>Rôle :</strong> {{ selectedProject.role }}</p>
-                    <p class="popup-link"><strong><a :href="selectedProject.link">Lien du projet</a></strong>
+                    <p class="popup-link"><strong><a target="_blank" :href="selectedProject.link">Lien du
+                                projet</a></strong>
                     </p>
 
                     <!-- Courte description -->
