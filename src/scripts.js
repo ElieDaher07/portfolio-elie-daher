@@ -1,7 +1,7 @@
 // Ajout des plugins dans le JS
 gsap.registerPlugin(ScrollTrigger);
 
-// ----- VUE JS ----- //
+// Création de l'app Vue: charge les projets initiales, gère le filtre et l'ouverture/fermeture du popup et le fetch
 const app = Vue.createApp({
   data() {
     return {
@@ -12,30 +12,35 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    // Applique le nouveau filtre et IA: force la mise à jour du swiper mobile pour éviter les décalages
     setFilter(filter) {
       this.activeFilter = filter;
       this.$nextTick(() => {
         if (window.projetsSwiper) {
-          window.projetsSwiper.update(); // IA: Met a jour le swiper
-          window.projetsSwiper.slideTo(0, 0); // IA: évite le "blank" à droite et le décalage résiduel
+          window.projetsSwiper.update(); // IA: Met a jour le swiper après le clique d'un filtre
+          window.projetsSwiper.slideTo(0, 0); // IA: évite le "blank" à droite et le décalage après avoir cliquer sur un filtre
         }
       });
     },
+    // Ouverture du popup d'un projet spécifique
     openPopup(project) {
       this.popupOpened = true;
       this.selectedProject = project;
     },
+    // Ferme le popup
     closePopup() {
       this.popupOpened = false;
       this.selectedProject = null;
     },
   },
+  // Chargement des données json
   mounted() {
     fetch("./src/projects.json")
       .then((response) => response.json())
       .then((data) => {
         this.projectsArr = data;
       })
+      // Si il ne trouve pas le json ou tout autre erreur, montre le message d'erreur dans le console.log
       .catch((error) => console.log("projects.json introuvable: ", error));
   },
 });
@@ -45,6 +50,8 @@ app.mount("#app");
 // ----- ANIMATION GSAP ----- //
 
 // SCROLLTRIGGER BANNIERE
+
+// Anime la bannière au scroll (monte et fade en sortant du viewport)
 gsap.to(".bloc-banniere-texte, .fleche-banniere", {
   y: -120,
   opacity: 0,
@@ -57,6 +64,7 @@ gsap.to(".bloc-banniere-texte, .fleche-banniere", {
   },
 });
 
+// Fait apparaître progressivement les titres dans la bannière
 // MOT PORTFOLIO
 gsap.from(".mot-portfolio", {
   opacity: 0,
@@ -65,7 +73,7 @@ gsap.from(".mot-portfolio", {
   delay: 0.3,
 });
 
-// PRENOM, NOM
+// PRENOM
 gsap.from(".prenom", {
   opacity: 0,
   y: 8,
@@ -74,6 +82,7 @@ gsap.from(".prenom", {
   delay: 1.6,
 });
 
+// NOM
 gsap.from(".nomfamille", {
   opacity: 0,
   y: 8,
@@ -102,7 +111,7 @@ gsap.from(".fleche-banniere", {
 
 // ----- SWIPER BUNDLE ----- //
 
-// Swiper logos (compétences)
+// Carrousel des logos de compétences: affiche 6 logos visibles, auto-slide en boucle
 const logosSwiper = new Swiper(".logos-swiper", {
   slidesPerView: "6",
   spaceBetween: 16,
@@ -112,7 +121,7 @@ const logosSwiper = new Swiper(".logos-swiper", {
   loop: true,
 });
 
-// Swiper projets (pour mobile) changement en "window." aulieu de créer un const suggéré par IA
+// Carrousel des projets (mobile): affichage des slides auto, centré, pas de boucle. Changement en "window." aulieu de créer un const suggéré par IA
 window.projetsSwiper = new Swiper(".projets-swiper", {
   slidesPerView: "auto",
   spaceBetween: 16,

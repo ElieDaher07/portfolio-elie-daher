@@ -1,6 +1,4 @@
-/* =========================
-   Variables globales
-   ========================= */
+/* Déclare les variables globales pour les couleurs et la typo */
 :root {
   --greyDark: #3f3f3f;
   --greyPale: #a1a1a1;
@@ -9,12 +7,14 @@
   --letter-weighting-bold: 700;
 }
 
+/* Réinitialise les marges/paddings et fixe le box-sizing pour un layout stable */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Définit la police, le fond, le scroll doux et bloque le débordement horizontal */
 html {
   font-family: "Jaldi", sans-serif;
   scroll-behavior: smooth;
@@ -22,9 +22,7 @@ html {
   overflow-x: hidden;
 }
 
-/* =========================
-   CSS général pour chaque section
-   ========================= */
+/* Pose la base visuelle de chaque section (centrer le contenu + text + z-index) */
 .section {
   position: relative;
   display: flex;
@@ -36,13 +34,16 @@ html {
 }
 
 /* =========================
-   Section Bannière
+        Section Bannière
    ========================= */
+
+/* Aligne et étire la bannière sur toute la hauteur de l’écran */
 .banniere {
   min-height: 100vh;
   justify-content: center;
 }
 
+/* Place une image plein écran en arrière-plan de la bannière avec un filtre sombre */
 .banniere:before {
   position: absolute;
   content: "";
@@ -58,10 +59,12 @@ html {
   z-index: -1;
 }
 
+/* Empêche la sélection du bloc de texte de la bannière */
 .bloc-banniere-texte {
   user-select: none;
 }
 
+/* Mot PORTFOLIO (gros, espacé, aligné à gauche) */
 .mot-portfolio {
   display: block;
   font-size: clamp(50px, 5vw, 70px);
@@ -72,6 +75,7 @@ html {
   text-align: left;
 }
 
+/* Met le prénom/nom en gros, serré, aligné à droite */
 .bloc-nom {
   font-size: clamp(60px, 6vw, 90px);
   font-weight: var(--letter-weighting-bold);
@@ -81,6 +85,7 @@ html {
   margin-top: 12px;
 }
 
+/* Affiche le rôle en dessous, compact, à droite */
 .bloc-role {
   font-size: clamp(20px, 4vw, 30px);
   letter-spacing: var(--letter-spacing-wide);
@@ -91,30 +96,36 @@ html {
   margin-top: 12px;
 }
 
+/* Force le mot CONCEPTEUR sur sa propre ligne */
 .concepteur {
   display: block;
 }
 
+/* Positionne la flèche d’ancre en bas de l’écran */
 .fleche-banniere {
   position: absolute;
   user-select: none;
   bottom: 50px;
 }
 
+/* Donne une taille/transition à la flèche de la bannière */
 .fleche-banniere img {
   width: 50px;
   transition: 0.35s ease;
   opacity: 0.8;
 }
 
+/* Fait glisser légèrement la flèche au survol */
 .fleche-banniere img:hover {
   transform: translateY(5px);
   opacity: 1;
 }
 
 /* =========================
-   Section À Propos
+      Section À Propos
    ========================= */
+
+/* Centre la section À propos et ajoute un padding latéral */
 .apropos {
   min-height: 100vh;
   justify-content: center;
@@ -122,6 +133,7 @@ html {
   padding: 0 24px;
 }
 
+/* Ajoute un fond image assombri derrière la section À propos */
 .apropos:before {
   position: absolute;
   content: "";
@@ -137,6 +149,7 @@ html {
   z-index: -1;
 }
 
+/* Cadre le texte À propos avec des lignes haut/bas et limite la largeur */
 .boite-texte-apropos {
   font-size: 20px;
   border-top: 3px solid var(--greyDark);
@@ -145,6 +158,7 @@ html {
   padding: 50px 0;
 }
 
+/* Justifie les paragraphes (À propos + Objectif) et garde un centrage visuel */
 .bloc-apropos,
 .bloc-objectif {
   text-align: justify;
@@ -154,20 +168,23 @@ html {
   user-select: none;
 }
 
+/* Style les liens de coordonnées et clarifie le hover */
 .bloc-coordonnees a {
   text-decoration: none;
   color: var(--whitePale);
   transition: color 0.2s ease;
 }
 
+/* Change la couleur des liens de coordonnées au survol */
 .bloc-coordonnees a:hover {
   color: #fff;
 }
 
 /* =========================
-   Section Projets
+      Section Projets
    ========================= */
 
+/* Ajoute une image d'arrière-plan assombrie derrière la section Projets via le pseudo-élément :before */
 .projets:before {
   position: absolute;
   content: "";
@@ -191,6 +208,7 @@ html {
   user-select: none;
 }
 
+/* Style des boutons de filtre (apparence, focus et états) */
 .bouton-filtre {
   background: none;
   border: 0;
@@ -204,39 +222,52 @@ html {
   cursor: pointer;
 }
 
+/* Accessibilité : indication visible au focus clavier */
 .bouton-filtre:focus-visible {
   outline: 2px solid var(--greyPale);
   outline-offset: 3px;
 }
 
+/* Interaction hover pour les boutons de filtre */
 .bouton-filtre:hover {
   border-bottom-color: var(--greyPale);
 }
 
+/* État actif / sélectionné pour les filtres */
 .bouton-filtre:active,
 .bouton-filtre.selected {
   color: var(--whitePale);
   border-bottom-color: var(--whitePale);
 }
 
-/* Projets — Swiper (mobile) */
+/* =========================
+   Projets — Swiper (mobile)
+   ========================= */
+
+/* Conteneur principal du swiper pour mobile (centré, largeur max) */
 .projets-swiper {
   width: 100%;
   max-width: 760px;
   margin: 0 auto;
 }
 
+/* Aligne les slides à l'intérieur du wrapper du swiper */
 .projets-swiper .swiper-wrapper {
   align-items: stretch;
 }
 
+/* Largeur et centrage des slides individuelles sur mobile */
 .projets-swiper .swiper-slide {
   width: 84%;
   display: flex;
   justify-content: center;
 }
 
-/* Projets — Grid (tablet/desktop) */
+/* =========================
+   Projets — Grid (tablet/desktop)
+   ========================= */
+
+/* Grille de projets (masquée sur mobile) */
 .projets-grille {
   display: none;
   width: 100%;
@@ -254,6 +285,7 @@ html {
   aspect-ratio: 4 / 5;
 }
 
+/* Image de la carte — style et filtres par défaut */
 .carte img {
   display: block;
   width: 100%;
@@ -264,10 +296,12 @@ html {
   filter: grayscale(50%) saturate(90%) brightness(0.82) contrast(0.92);
 }
 
+/* Indique que l'image est cliquable au survol */
 .carte:hover img {
   cursor: pointer;
 }
 
+/* Titre positionné au-dessus de l'image, centré et stylisé */
 .carte-titre {
   position: absolute;
   top: auto;
@@ -291,6 +325,7 @@ html {
 /* =========================
    Section Logos (Compétences)
    ========================= */
+/* Conteneur principal des logos avec bordures et centrage */
 .logos-bloc {
   max-width: 360px;
   display: flex;
@@ -303,15 +338,18 @@ html {
   padding: 32px 0;
 }
 
+/* Alignement vertical des slides du swiper de logos */
 .logos-swiper .swiper-wrapper {
   align-items: center;
 }
 
+/* Taille des slides pour le swiper de logos */
 .logos-swiper .swiper-slide {
   width: auto;
   padding: 0 9px;
 }
 
+/* Apparence des images de logos (taille, opacité, transition) */
 .logos-swiper img {
   height: 50px;
   width: auto;
@@ -320,6 +358,7 @@ html {
   transition: opacity 0.15s ease;
 }
 
+/* Effet hover pour rendre les logos plus visibles */
 .logos-swiper img:hover {
   opacity: 1;
 }
@@ -331,6 +370,7 @@ html {
   margin-top: 50px;
 }
 
+/* Flèche en bas de page — position et transformation */
 .fleche-footer img {
   width: 50px;
   position: absolute;
@@ -340,11 +380,13 @@ html {
   opacity: 0.8;
 }
 
+/* Animation de la flèche du footer au survol */
 .fleche-footer img:hover {
   transform: translateX(-50%) rotate(180deg) translateY(5px);
   opacity: 1;
 }
 
+/* Liste des icônes sociales (centrée, espacement) */
 .socials {
   list-style: none;
   display: flex;
@@ -353,6 +395,7 @@ html {
   padding: 60px 0;
 }
 
+/* Style des icônes sociales */
 .socials img {
   width: 30px;
   height: 30px;
@@ -361,6 +404,7 @@ html {
   transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
+/* Hover sur les liens sociaux — icônes pleines */
 .socials a:hover img {
   opacity: 1;
   transform: opacity(1);
@@ -369,6 +413,8 @@ html {
 /* =========================
    Popup Projet
    ========================= */
+
+/* Conteneur principal de la popup (plein écran, superposé) */
 .popup-projet {
   position: fixed;
   top: 0;
@@ -378,13 +424,18 @@ html {
   z-index: 100;
 }
 
+/* Overlay semi-transparent derrière la popup */
 .popup-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
 }
 
+/* Panneau central de la popup (cadre, bordures, dimensions) */
 .popup-panel {
   position: absolute;
   top: 0;
@@ -404,6 +455,7 @@ html {
   overflow: hidden;
 }
 
+/* Bouton de fermeture de la popup (position et style) */
 .popup-close {
   position: absolute;
   top: 40px;
@@ -421,11 +473,13 @@ html {
   transition: all 0.18s ease;
 }
 
+/* Hover pour le bouton de fermeture */
 .popup-close:hover {
   color: var(--greyDark);
   background-color: var(--whitePale);
 }
 
+/* Zone scrollable interne de la popup */
 .popup-scroll {
   height: 100%;
   overflow: auto;
@@ -433,6 +487,7 @@ html {
   scroll-padding-top: 8px;
 }
 
+/* Titre secondaire à l'intérieur de la popup */
 .popup-scroll h2 {
   font-size: 35px;
   font-weight: var(--letter-weighting-bold);
@@ -444,6 +499,7 @@ html {
   border-left: 2px solid var(--greyDark);
 }
 
+/* Ligne d'entête de la popup (métadonnées) */
 .popup-headerline {
   display: flex;
   flex-wrap: wrap;
@@ -452,6 +508,7 @@ html {
   margin: 2px 0 16px 0;
 }
 
+/* Style du texte indiquant le logiciel utilisé */
 .popup-software {
   font-size: 25px;
   font-weight: var(--letter-weighting-bold);
@@ -459,6 +516,7 @@ html {
   font-style: normal;
 }
 
+/* Titre principal de la popup */
 .popup-title {
   font-size: 35px;
   font-weight: var(--letter-weighting-bold);
@@ -468,6 +526,7 @@ html {
   color: var(--whitePale);
 }
 
+/* Description courte du projet */
 .popup-shortDesc {
   font-size: 18px;
   line-height: 1.5;
@@ -478,6 +537,7 @@ html {
   font-weight: var(--letter-weighting-bold);
 }
 
+/* Image principale dans la popup */
 .popup-img {
   display: block;
   width: 100%;
@@ -490,6 +550,7 @@ html {
   object-fit: cover;
 }
 
+/* Description longue et texte explicatif */
 .popup-longDesc {
   font-size: 20px;
   line-height: 1.5;
@@ -499,6 +560,7 @@ html {
   margin: 16px 0 24px 0;
 }
 
+/* Titre de la section processus dans la popup */
 .popup-processus {
   font-size: 35px;
   font-weight: var(--letter-weighting-bold);
@@ -510,6 +572,7 @@ html {
   border-top: 2px solid var(--greyDark);
 }
 
+/* Paragraphes généraux dans la popup */
 .popup-p {
   font-size: 20px;
   text-align: left;
@@ -519,6 +582,7 @@ html {
   margin: 10px 0 18px 0;
 }
 
+/* Liens dans la popup (styles et hover) */
 .popup-link a {
   color: var(--whitePale);
   text-decoration: none;
@@ -533,6 +597,7 @@ html {
   border-color: #fff;
 }
 
+/* Les tags du projet dans la popup (catégorie, type, équipe, etc.) */
 .popup-category,
 .popup-type,
 .popup-team,
@@ -549,6 +614,7 @@ html {
   border-left: 2px solid var(--greyDark);
 }
 
+/* Renforcement visuel des balises strong (gras, couleur) */
 .popup-category strong,
 .popup-type strong,
 .popup-team strong,
@@ -587,6 +653,7 @@ html {
     outline-offset: 3px;
   }
 
+  /* Masque la version mobile et affiche la grille sur tablette */
   .projets-swiper,
   .mobile {
     display: none !important;
@@ -601,12 +668,14 @@ html {
     width: 100%;
   }
 
+  /* Permet à certains projets de s'étendre sur toute la largeur de la grille */
   .projets-grille .solo {
     grid-column: 1 / -1;
     justify-self: center;
     width: 320px;
   }
 
+  /* Ajuste la répétition et la taille du fond pour la section projets sur tablette */
   .projets:before {
     background-repeat: repeat;
     background-size: 1920px 1080px;
@@ -665,11 +734,13 @@ html {
     font-size: 1.3vw;
   }
 
+  /* Effet hover : fait apparaître le titre de la carte */
   .carte:hover .carte-titre {
     opacity: 1;
     transform: translateY(0);
   }
 
+  /* Images en desktop : retrait des filtres par défaut */
   .carte img {
     display: block;
     width: 100%;
@@ -680,10 +751,12 @@ html {
     transition: filter 0.25s ease, opacity 0.25s ease;
   }
 
+  /* Masque initial du titre sur desktop pour effet d'apparition au hover */
   .carte-titre {
     opacity: 0;
   }
 
+  /* Réapplique un filtrage à l'image au survol de la carte */
   .carte:hover img {
     filter: grayscale(50%) saturate(90%) brightness(0.82) contrast(0.92);
   }

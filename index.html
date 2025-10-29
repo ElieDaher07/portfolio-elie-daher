@@ -3,25 +3,42 @@
 
 <head>
     <meta charset="UTF-8" />
+    <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio d'Elie Daher — Conception de niveaux et 3D.">
+    <meta property="og:title" content="Portfolio - Elie Daher">
+    <meta property="og:description" content="Portfolio d'Elie Daher — Conception de niveaux et 3D.">
+    <meta property="og:url" content="https://eliedaher07.github.io/portfolio-elie-daher/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Elie Daher">
+    <meta property="og:locale" content="fr_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio - Elie Daher">
+    <meta name="twitter:description" content="Portfolio d'Elie Daher — Conception de niveaux et  3D.">
+    <!-- Titre du site -->
     <title>Portfolio - Elie Daher</title>
+    <!-- Favicon et lien CSS -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-    <meta name="description" content="Portfolio d'Elie Daher — Conception de niveaux et environnements 3D.">
     <link rel="stylesheet" href="./src/styles.css">
+    <!-- Lien font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GSAP + plugins pour animations de scroll -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <!-- Vue pour la logique des filtres + popup projets -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <!-- Swiper pour le carrousel mobile des projets + logos -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Script principal (instancie Vue, GSAP, Swiper, etc.) -->
     <script src="./src/scripts.js" defer></script>
 </head>
 
 <body>
     <div id="app">
-        <!-- ===== SECTION 1 - BANNIÈRE "PORTFOLIO"=====  -->
+        <!-- ===== SECTION 1 — BANNIÈRE (titre, nom, rôle, flèche vers section suivante) ===== -->
         <section class="section banniere" id="banniere">
             <div class="bloc-banniere-texte">
                 <h2 class="mot-portfolio">PORTFOLIO</h2>
@@ -39,7 +56,7 @@
             </a>
         </section>
 
-        <!-- ===== SECTION 2 - À PROPOS+OBJECTIF+CONTACT ===== -->
+        <!-- ===== SECTION 2 — À PROPOS (texte, objectif, contacts) ===== -->
         <section id="apropos" class="section apropos">
             <div class="boite-texte-apropos">
                 <p class="bloc-apropos">
@@ -48,7 +65,7 @@
                     artistique.
                     J'aime imaginer des mondes cohérents et esthétiques, jouer avec la lumière et les textures pour
                     créer une ambiance visuelle forte, que ce soit réaliste ou fictif.
-                </p> <br>
+                </p><br>
                 <p class="bloc-objectif">
                     Je souhaite travailler dans le domaine du jeu vidéo ou de la 3D, surtout dans la conception
                     d'environnements.
@@ -57,15 +74,15 @@
                     création visuelle.
                 </p>
                 <p class="bloc-coordonnees">
-                    <br><strong><a href="sms:+14388805281">438-880-5281</a></strong> <br>
-                    <strong><a target="_blank"
-                            href="mailto:eliedaher2000@gmail.com">eliedaher2000@gmail.com</a></strong>
+                    <br><strong><a href="sms:+14388805281">438-880-5281</a></strong><br>
+                    <strong><a href="mailto:eliedaher2000@gmail.com">eliedaher2000@gmail.com</a></strong>
                 </p>
             </div>
         </section>
 
-        <!-- ===== SECTION 3 - PROJETS: FILTRES + CARTES + COMPÉTENCES =====  -->
+        <!-- ===== SECTION 3 — PROJETS (filtres, cartes, logos compétences) ===== -->
         <section class="section projets">
+            <!-- Filtres: met à jour activeFilter (TOUT / 3D / JEUX / WEB) -->
             <div class="bloc-filtres">
                 <button class="bouton-filtre" :class="{ selected: activeFilter === 'TOUT'}"
                     @click="setFilter('TOUT')">TOUT</button>
@@ -77,12 +94,11 @@
                     @click="setFilter('WEB')">WEB</button>
             </div>
 
-            <!-- ===== Swiper pour la version Mobile ===== -->
+            <!-- Carrousel mobile: affiche les projets filtrés, clic ouvre le popup -->
             <div class="swiper projets-swiper mobile">
                 <div class="swiper-wrapper">
                     <template v-for="p in projectsArr">
-                        <!-- Ça montre les projets dépendant de son activeFilter, par défaut c'est à 'TOUT'. Montre le div si TOUT est choisi ou montre le projet par rapport as son category p.category (donnees json) -->
-                        <!-- Si tu clique pour ouvrir un des projets, ça ouvre un popup et met la variable popupOpened à 'true' -->
+                        <!-- Affiche si le filtre correspond (ou TOUT). Clic: openPopup(p) -->
                         <div class="swiper-slide" v-if="activeFilter === 'TOUT' || activeFilter === p.category"
                             @click="openPopup(p)">
                             <div class="carte">
@@ -90,27 +106,22 @@
                                 <h3 class="carte-titre">{{ p.title }}</h3>
                             </div>
                         </div>
-
                     </template>
                 </div>
             </div>
 
-            <!-- ===== Grid pour la version Desktop/iPad ===== -->
+            <!-- Grille tablette/desktop: même logique de filtre + ouverture popup -->
             <div class="projets-grille desktop">
-
                 <template v-for="p in projectsArr">
-                    <!-- Ça montre les projets dépendant de son activeFilter, par défaut c'est à 'TOUT' -->
-                    <!-- Si tu clique pour ouvrir un des projets, ça ouvre un popup et met la variable popupOpened à 'true' -->
                     <div class="carte" v-if="activeFilter === 'TOUT' || activeFilter === p.category"
                         @click="openPopup(p)">
                         <img :src="p.images[0]" :alt="'Projet ' + p.title">
                         <h3 class="carte-titre">{{ p.title }}</h3>
                     </div>
-
                 </template>
             </div>
 
-            <!-- ===== Logo compétences ===== -->
+            <!-- Logos de compétences: chaque logo ouvre le site officiel dans un nouvel onglet -->
             <div class="logos-bloc">
                 <div class="swiper logos-swiper">
                     <div class="swiper-wrapper">
@@ -158,68 +169,69 @@
                 </div>
             </div>
 
-            <!-- ===== Mini footer de la section ===== -->
+            <!-- Mini-footer de section: retour en haut + liens sociaux -->
             <div class="bas-de-page">
                 <a href="#banniere" class="fleche-footer">
                     <img src="./assets/images/arrow.png" alt="Flèche vers le haut">
                 </a>
                 <ul class="socials">
-                    <li><a target="_blank" href="https://www.linkedin.com/in/">
+                    <li><a target="_blank" data-toggle="tooltip" title="LinkedIn" href="https://www.linkedin.com/in/">
                             <img src="./assets/images/icon_linkedin.png" alt="LinkedIn"></a></li>
-                    <li><a target="_blank" href="https://github.com/eliedaher07">
+                    <li><a target="_blank" data-toggle="tooltip" title="GitHub" href="https://github.com/eliedaher07">
                             <img src="./assets/images/icon_github.png" alt="GitHub"></a></li>
-                    <li><a target="_blank" href="https://instagram.com/eliedhr">
+                    <li><a target="_blank" data-toggle="tooltip" title="Instagram" href="https://instagram.com/eliedhr">
                             <img src="./assets/images/icon_instagram.png" alt="Instagram"></a></li>
-                    <li><a target="_blank" href="mailto:eliedaher2000@gmail.com">
-                            <img src="./assets/images/icon_mail.png" alt="Courriel"></a></li>
+                    <li><a href="mailto:eliedaher2000@gmail.com">
+                            <img data-toggle="tooltip" title="Courriel" src="./assets/images/icon_mail.png"
+                                alt="Courriel"></a></li>
                 </ul>
             </div>
         </section>
 
-        <!-- ===== Popup Projet ===== -->
-        <!-- Si popupOpened est 'true' alors montre la div popup-projet-->
+        <!-- ===== POPUP PROJET — détails d'un projet sélectionné ===== -->
+        <!-- v-show basé sur popupOpened (true = visible) -->
         <div class="popup-projet" v-show="popupOpened">
-
+            <!-- Clic sur l'overlay = fermeture -->
             <div class="popup-overlay" @click="closePopup()"></div>
 
+            <!-- Panneau central scrollable avec contenu du projet -->
             <section class="popup-panel">
-
                 <button type="button" class="popup-close" @click="closePopup()">X</button>
 
+                <!-- Rend le contenu seulement si selectedProject est défini -->
                 <div class="popup-scroll" v-if="selectedProject">
-                    <!-- Titre et logiciel -->
+                    <!-- En-tête du popup: titre + logiciel -->
                     <div class="popup-headerline">
                         <div class="popup-title">{{ selectedProject.title }}</div>
                         <p class="popup-software">({{ selectedProject.software }})</p>
                     </div>
-                    <!-- Tags -->
+
+                    <!-- Métadonnées du projet (catégorie, type, équipe, etc.) -->
                     <p class="popup-category"><strong>Catégorie :</strong> {{ selectedProject.category }}</p>
                     <p class="popup-type"><strong>Type :</strong> {{ selectedProject.type }}</p>
                     <p class="popup-team"><strong>Réalisé par :</strong> {{ selectedProject.team }}</p>
                     <p class="popup-course"><strong>Cours :</strong> {{ selectedProject.course }}</p>
                     <p class="popup-role"><strong>Rôle :</strong> {{ selectedProject.role }}</p>
                     <p class="popup-link"><strong><a target="_blank" :href="selectedProject.link">Lien du
-                                projet</a></strong>
-                    </p>
+                                projet</a></strong></p>
 
-                    <!-- Courte description -->
+                    <!-- Résumé court -->
                     <p class="popup-shortDesc">{{ selectedProject.shortDesc }}</p>
 
-                    <!-- Image 01 -->
+                    <!-- Image principale -->
                     <img class="popup-img" :src="selectedProject.images[0]" :alt="selectedProject.title">
 
-                    <!-- Longue description -->
+                    <!-- Description longue -->
                     <p class="popup-longDesc">{{ selectedProject.longDesc }}</p>
 
-                    <!-- Images 02, 03, 04 qui montre seulement pour les projets sans les données de processus de création  -->
+                    <!-- Si pas de processImages: on affiche les images supplémentaires 2,3,4 -->
                     <div v-if="!selectedProject.processImages">
                         <img class="popup-img" :src="selectedProject.images[1]" :alt="selectedProject.title">
                         <img class="popup-img" :src="selectedProject.images[2]" :alt="selectedProject.title">
                         <img class="popup-img" :src="selectedProject.images[3]" :alt="selectedProject.title">
                     </div>
 
-                    <!-- ===== Processus de création, qui montre seulement pour le projet avec les données de processus de création ===== -->
-                    <!-- Si il trouve les données "processImages", alors il montre la div -->
+                    <!-- Si processImages existe: on montre le processus de création + versions -->
                     <div v-if="selectedProject.processImages">
                         <p class="popup-processus"><strong>Processus de création</strong></p>
                         <p class="popup-p">{{ selectedProject.processDescription01 }}</p>
@@ -231,13 +243,15 @@
                         <img class="popup-img" :src="selectedProject.processImages[2]" :alt="selectedProject.title">
                         <img class="popup-img" :src="selectedProject.processImages[3]" :alt="selectedProject.title">
 
-                        <!-- Rendus finaux -->
+                        <!-- Rendus finaux (versions) -->
                         <h2><strong>Version 1</strong></h2>
                         <p class="popup-p">{{ selectedProject.processDescription05 }}</p>
                         <img class="popup-img" :src="selectedProject.processImages[4]" :alt="selectedProject.title">
+
                         <h2><strong>Version 2</strong></h2>
                         <p class="popup-p">{{ selectedProject.processDescription06 }}</p>
                         <img class="popup-img" :src="selectedProject.processImages[5]" :alt="selectedProject.title">
+
                         <h2><strong>Version finale</strong></h2>
                         <p class="popup-p">{{ selectedProject.processDescription07 }}</p>
                         <img class="popup-img" :src="selectedProject.processImages[6]" :alt="selectedProject.title">
