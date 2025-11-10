@@ -200,7 +200,7 @@ html {
   z-index: -1;
 }
 
-/* Filtres (TOUT / 3D / JEUX / WEB) */
+/* Filtres (TOUT / 3D / JEUX / WEB / VIDEO) */
 .bloc-filtres {
   display: flex;
   justify-content: center;
@@ -214,8 +214,8 @@ html {
   border: 0;
   border-bottom: 3px solid var(--greyDark);
   color: var(--whitePale);
-  font-size: 4.5vw;
-  padding: 8px 24px 6px;
+  font-size: 3.5vw;
+  padding: 8px 20px 6px;
   margin: 0;
   letter-spacing: var(--letter-spacing-wide);
   transition: border-bottom-color 0.2s ease, color 0.2s ease;
