@@ -92,6 +92,8 @@
                     @click="setFilter('JEUX')">JEUX</button>
                 <button class="bouton-filtre" :class="{ selected: activeFilter === 'WEB'}"
                     @click="setFilter('WEB')">WEB</button>
+                <button class="bouton-filtre" :class="{ selected: activeFilter === 'VIDÉO'}"
+                    @click="setFilter('VIDÉO')">VIDÉO</button>
             </div>
 
             <!-- Carrousel mobile: affiche les projets filtrés, clic ouvre le popup -->
@@ -211,9 +213,14 @@
                     <p class="popup-type"><strong>Type :</strong> {{ selectedProject.type }}</p>
                     <p class="popup-team"><strong>Réalisé par :</strong> {{ selectedProject.team }}</p>
                     <p class="popup-course"><strong>Cours :</strong> {{ selectedProject.course }}</p>
-                    <p class="popup-role"><strong>Rôle :</strong> {{ selectedProject.role }}</p>
-                    <p class="popup-link"><strong><a target="_blank" :href="selectedProject.link">Lien du
+                    <p class="popup-role" v-if="selectedProject.role"><strong>Rôle :</strong> {{ selectedProject.role }}
+                    </p>
+                    <p class="popup-link" v-if="selectedProject.link"><strong><a target="_blank"
+                                :href="selectedProject.link">Lien du
                                 projet</a></strong></p>
+                    <p class="popup-link" v-if="selectedProject.link2"><strong><a target="_blank"
+                                :href="selectedProject.link2">Autre lien
+                            </a></strong></p>
 
                     <!-- Résumé court -->
                     <p class="popup-shortDesc">{{ selectedProject.shortDesc }}</p>
@@ -226,9 +233,12 @@
 
                     <!-- Si pas de processImages: on affiche les images supplémentaires 2,3,4 -->
                     <div v-if="!selectedProject.processImages">
-                        <img class="popup-img" :src="selectedProject.images[1]" :alt="selectedProject.title">
-                        <img class="popup-img" :src="selectedProject.images[2]" :alt="selectedProject.title">
-                        <img class="popup-img" :src="selectedProject.images[3]" :alt="selectedProject.title">
+                        <img class="popup-img" v-if="selectedProject.images[1]" :src="selectedProject.images[1]"
+                            :alt="selectedProject.title">
+                        <img class="popup-img" v-if="selectedProject.images[2]" :src="selectedProject.images[2]"
+                            :alt="selectedProject.title">
+                        <img class="popup-img" v-if="selectedProject.images[3]" :src="selectedProject.images[3]"
+                            :alt="selectedProject.title">
                     </div>
 
                     <!-- Si processImages existe: on montre le processus de création + versions -->

@@ -76,6 +76,7 @@
       "./assets/images/img_powball_04.png"
     ],
     "link": "https://www.youtube.com/watch?v=1T_U1eIJfLM",
+    "link2": "https://github.com/MrAosix/pow_ball",
     "role": "Modélisateur, Game Designer, Concepteur Sonore",
     "software": "Unity, Reaper, Touch Designer"
   },
@@ -118,5 +119,44 @@
     "link": "https://emerykbelisle.bennerwebs.com/eml/",
     "role": "Développeur web, Designer",
     "software": "WordPress, Figma, VS Code"
+  },
+
+  {
+    "id": 6,
+    "title": "FOLIE",
+    "category": "VIDÉO",
+    "course": "Vidéo 1",
+    "type": "Équipe",
+    "team": "Elie Daher, Mohamed-Amine Boussetta",
+    "images": [
+      "./assets/images/img_folie_01.jpg",
+      "./assets/images/img_folie_02.png"
+    ],
+    "link": "https://youtu.be/rXTyiavrfpA",
+    "software": "DaVinci, Dragonframe4, Edelkrone, After Effects, Photoshop, Illustrator"
+  },
+
+  {
+    "id": 7,
+    "title": "DEUIL",
+    "category": "VIDÉO",
+    "course": "Vidéo 2",
+    "type": "Équipe",
+    "team": "Elie Daher, Mohamed-Amine Boussetta, Eméryk Bélisle, Ting Yung Lu",
+    "images": ["./assets/images/img_deuil_01.png"],
+    "link": "https://youtu.be/RsYLE3d8xyo",
+    "software": "DaVinci"
+  },
+  {
+    "id": 8,
+    "title": "COALESCENCE",
+    "category": "VIDÉO",
+    "course": "Vidéo 2",
+    "type": "Équipe",
+    "team": "Elie Daher, Mohamed-Amine Boussetta, Eméryk Bélisle, Ting Yung Lu",
+    "images": ["./assets/images/img_coalescence_01.png"],
+    "link": "https://youtu.be/Nsh67wLjDsc",
+    "link2": "https://youtu.be/8HeV2Hcrnbs",
+    "software": "DaVinci"
   }
 ]
