@@ -8,12 +8,7 @@
     "team": "Elie Daher",
     "shortDesc": "J'ai créé une expérience qui exprime la désolation à travers des sons et des animations abstraites, en jouant sur le vide, la confusion et la perte.",
     "longDesc": "Le projet demandait de créer une expérience interactive à partir d'une caméra et d'un microphone. J'ai produit une scène qui réagit en temps réel avec un rendu 3D, des effets visuels dans TouchDesigner et des sons que j'ai synthétisés dans Reaper et MAX. Le but était de plonger la personne dans une ambiance instable et troublante qui fait ressentir la désolation.",
-    "images": [
-      "./assets/images/img_desolation_01.png",
-      "./assets/images/img_desolation_02.png",
-      "./assets/images/img_desolation_03.png",
-      "./assets/images/img_desolation_04.png"
-    ],
+    "images": ["./assets/images/img_desolation_01.png", "./assets/images/img_desolation_02.png", "./assets/images/img_desolation_03.png", "./assets/images/img_desolation_04.png"],
     "link": "https://youtu.be/rM1qbGPscNA",
     "role": "Animateur, Compositeur, Designer",
     "software": "Maya, Touch Designer, MAX, DaVinci"
@@ -49,12 +44,7 @@
     "processDescription06": "Dans la deuxième version, on a retravaillé l'éclairage et corrigé les éléments du sol qui flottaient. On voulait que la lumière venant de la fenêtre soit plus marquée.",
     "processDescription07": "Pour la version finale, on a réduit la lumière des lampes et accentué celle de la fenêtre pour créer un effet dramatique. On a aussi ajouté une potion renversée éclairée par la lumière.",
     "processDescription08": "On a fait plusieurs rendus finaux sous différents angles, dont un gros plan sur la potion, pour bien montrer les détails et l'ambiance générale de la scène.",
-    "finalImages": [
-      "./assets/images/img_arsenal_final_01.png",
-      "./assets/images/img_arsenal_final_02.png",
-      "./assets/images/img_arsenal_final_03.png",
-      "./assets/images/img_arsenal_final_04.png"
-    ],
+    "finalImages": ["./assets/images/img_arsenal_final_01.png", "./assets/images/img_arsenal_final_02.png", "./assets/images/img_arsenal_final_03.png", "./assets/images/img_arsenal_final_04.png"],
     "link": "./assets/doc/Arsenal_Daher_Boussetta_Belisle.pdf",
     "role": "Modélisateur",
     "software": "Maya, Photoshop"
@@ -69,12 +59,7 @@
     "team": "Elie Daher, Émeryk Bélisle",
     "shortDesc": "J'ai créé une expérience VR où le joueur doit survivre dans un laboratoire pendant un temps limité en évitant des balles et en utilisant les bonus et l'environnement à son avantage.",
     "longDesc": "Le projet consiste à produire une expérience de réalité virtuelle inspirée d'un jeu rétro pour casque Oculus. Le joueur incarne un sujet de test dans un laboratoire où il doit éviter des balles aux comportements variés pendant une durée déterminée. Les balles rebondissent sur les murs et possèdent chacune des propriétés spécifiques, certaines se divisant ou changeant de vitesse après un impact. Un second joueur, connecté via TouchDesigner, peut interagir avec l'environnement en ajoutant des obstacles ou en modifiant la structure de la salle. L'expérience mélange survie, stratégie et chaos contrôlé jusqu'à la fin du chronomètre.",
-    "images": [
-      "./assets/images/img_powball_01.png",
-      "./assets/images/img_powball_02.png",
-      "./assets/images/img_powball_03.png",
-      "./assets/images/img_powball_04.png"
-    ],
+    "images": ["./assets/images/img_powball_01.png", "./assets/images/img_powball_02.png", "./assets/images/img_powball_03.png", "./assets/images/img_powball_04.png"],
     "link": "https://www.youtube.com/watch?v=1T_U1eIJfLM",
     "link2": "https://github.com/MrAosix/pow_ball",
     "role": "Modélisateur, Game Designer, Concepteur Sonore",
@@ -90,73 +75,9 @@
     "team": "Elie Daher",
     "shortDesc": "Je devais démontrer une réalisation d'une expérience ludique avec un sens de progression en intégrant images et sons avec Phaser.",
     "longDesc": "The Lost Friend est un jeu d'aventure en 2D où le joueur incarne un héros qui doit sauver son ami capturé. Pour y arriver, il doit explorer différents niveaux, combattre des ennemis et collecter des diamants servant à négocier avec le boss ennemi. Inspiré de jeux comme Ori and the Will of the Wisps et Hollow Knight, le jeu mélange exploration, combat et narration pour créer une expérience à la fois simple et immersive. Chaque niveau demande de ramasser tous les diamants pour progresser, et les dialogues intégrés aident à comprendre l'histoire et les objectifs.",
-    "images": [
-      "./assets/images/img_thelostfriend_01.png",
-      "./assets/images/img_thelostfriend_02.png",
-      "./assets/images/img_thelostfriend_03.png",
-      "./assets/images/img_thelostfriend_04.png"
-    ],
+    "images": ["./assets/images/img_thelostfriend_01.png", "./assets/images/img_thelostfriend_02.png", "./assets/images/img_thelostfriend_03.png", "./assets/images/img_thelostfriend_04.png"],
     "link": "https://edhr07.itch.io/the-lost-friend",
     "role": "Programmeur, Concepteur de niveau, Concepteur artistique, Concepteur audio",
     "software": "Phaser, Tiled, Photoshop, Figma"
-  },
-
-  {
-    "id": 5,
-    "title": "EML",
-    "category": "WEB",
-    "course": "Web 4",
-    "type": "Équipe",
-    "team": "Elie Daher, Émeryk Bélisle",
-    "shortDesc": "J'ai co-créé le site EML, un magazine web sur les jeux vidéo développé avec WordPress. Le projet visait à appliquer toutes les notions apprises en cours en réalisant un site complet avec une structure dynamique, un design personnalisé et une gestion de contenu claire.",
-    "longDesc": "EML est un site de type magazine conçu avec le CMS WordPress. Le projet avait pour but de créer une plateforme complète en appliquant les notions apprises, comme la personnalisation du thème, la gestion de la base de données et l'organisation du contenu dynamique. Le site comprend plusieurs pages : une page d'accueil avec les articles récents, une page d'auteurs, une barre de recherche et une page d'erreur 404 personnalisée. Le contenu est géré à partir du tableau de bord WordPress, ce qui permet d'ajouter facilement de nouvelles critiques, guides, classements (top 10) et autres articles. Nous avons créé un site clair et réactif, traduit en français et en anglais, avec un thème qui reflète notre style et présente nos textes de manière simple et bien structurée.",
-    "images": [
-      "./assets/images/img_eml_01.png",
-      "./assets/images/img_eml_02.png",
-      "./assets/images/img_eml_03.png",
-      "./assets/images/img_eml_04.png"
-    ],
-    "link": "https://emerykbelisle.bennerwebs.com/eml/",
-    "role": "Développeur web, Designer",
-    "software": "WordPress, Figma, VS Code"
-  },
-
-  {
-    "id": 6,
-    "title": "FOLIE",
-    "category": "VIDÉO",
-    "course": "Vidéo 1",
-    "type": "Équipe",
-    "team": "Elie Daher, Mohamed-Amine Boussetta",
-    "images": [
-      "./assets/images/img_folie_01.jpg",
-      "./assets/images/img_folie_02.png"
-    ],
-    "link": "https://youtu.be/rXTyiavrfpA",
-    "software": "DaVinci, Dragonframe4, Edelkrone, After Effects, Photoshop, Illustrator"
-  },
-
-  {
-    "id": 7,
-    "title": "DEUIL",
-    "category": "VIDÉO",
-    "course": "Vidéo 2",
-    "type": "Équipe",
-    "team": "Elie Daher, Mohamed-Amine Boussetta, Eméryk Bélisle, Ting Yung Lu",
-    "images": ["./assets/images/img_deuil_01.png"],
-    "link": "https://youtu.be/RsYLE3d8xyo",
-    "software": "DaVinci"
-  },
-  {
-    "id": 8,
-    "title": "COALESCENCE",
-    "category": "VIDÉO",
-    "course": "Vidéo 2",
-    "type": "Équipe",
-    "team": "Elie Daher, Mohamed-Amine Boussetta, Eméryk Bélisle, Ting Yung Lu",
-    "images": ["./assets/images/img_coalescence_01.png"],
-    "link": "https://youtu.be/Nsh67wLjDsc",
-    "link2": "https://youtu.be/8HeV2Hcrnbs",
-    "software": "DaVinci"
   }
 ]
